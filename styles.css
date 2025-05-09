@@ -27,18 +27,22 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.nav .logo { font-size: 24px; font-weight: bold; }
+.nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 .nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 15px;
 }
-.nav ul li { margin-left: 20px; }
 .nav ul li a {
   color: white;
   text-decoration: none;
@@ -82,14 +86,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 40px;
+  padding: 20px;
 }
 .about-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   border-radius: 10px;
 }
 .about-text {
-  max-width: 400px;
+  max-width: 500px;
   text-align: left;
 }
 .about-text h2 {
@@ -126,11 +131,51 @@ body {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .hero-content h2 {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .about-container {
+  .nav {
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
   }
   .hero-content h2 {
     font-size: 32px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 26px;
+  }
+  .nav .logo {
+    font-size: 20px;
+  }
+  .site-footer {
+    font-size: 16px;
   }
 }
