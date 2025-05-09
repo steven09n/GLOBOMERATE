@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Globomerate</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #1e2a38;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      background-color: #1e2a38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      color: #f8f7f4;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #f0c040;
+      text-decoration: underline;
+    }
+
+    /* Header section */
+    .hero-content {
+      text-align: center;
+      background-color: #1e2a38;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    /* Main content */
+    .main-content {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background-color: #f0c040;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0af33;
+    }
+
+    footer {
+      background-color: #1e2a38;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #f0c040;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">GLOBOMERATE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header content -->
+  <div class="hero-content">
+    <h2>Contact Us</h2>
+  </div>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <p style="font-size: 1.1rem; margin-bottom: 2rem; text-align: center;">
+      Please fill out the form below or email us with a description of your needs.
+      We will respond within one business day with a quote or estimate. If there is mutual interest, 
+      we can proceed with a retainer agreement.
+    </p>
+
+    <form>
+      <div>
+        <label for="name" style="font-weight: bold;">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div>
+        <label for="email" style="font-weight: bold;">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="phone" style="font-weight: bold;">Phone:</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+
+      <div>
+        <label for="description" style="font-weight: bold;">Description:</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info" style="margin-top: 2rem; text-align: center; font-size: 1rem;">
+      <p>You may also contact us at <a href="mailto:info@globomerate.com">info@globomerate.com</a></p>
+      <p>Globomerate, LLC<br>Newark, DE, USA<br>855-549-5040</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Contact Us</h3>
+    <p><a href="mailto:info@globomerate.com">info@globomerate.com</a></p>
+    <p>Globomerate, LLC<br>Newark, DE, USA<br>855-549-5040</p>
+  </footer>
+
+</body>
+</html>

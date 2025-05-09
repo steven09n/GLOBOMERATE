@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  /* Hero */
+  .hero {
+    background: url('2mun.png') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav .logo { font-size: 24px; font-weight: bold; }
+  .nav ul {
+    list-style: none;
+    display: flex;
+  }
+  .nav ul li { margin-left: 20px; }
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .cta-button {
+    padding: 12px 24px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  /* Sections */
+  .full-section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .alt-bg {
+    background-color: #f8f8f8;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .full-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .full-section p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  
+
+
+
+
+
+  /* Footer mejorado */
+.site-footer {
+    background-color: #002b45;        /* Azul oscuro para armonizar con el fondo de hero */
+    color: #e0e0e0;                   /* Texto claro pero más suave que blanco puro */
+    padding: 60px 20px;               /* Más espacio para que respire */
+    text-align: center;
+    border-top: 4px solid #ffcc00;    /* Línea dorada como acento */
+    font-size: 18px;                  /* Base más grande */
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .site-footer h3 {
+    font-size: 30px;                  /* Titular más grande */
+    margin-bottom: 20px;
+    color: #ffffff;                   /* Titular bien destacado */
+    letter-spacing: 1px;
+  }
+  
+  .site-footer p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .site-footer a {
+    color: #ffcc00;                   /* Enlace dorado para que resalte */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
