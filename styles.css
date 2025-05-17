@@ -27,25 +27,26 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 30px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 .nav .logo {
-  font-size: 24px;
+  font-size: 80px;
   font-weight: bold;
 }
 .nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 3rem;
+  font-size: 20px;
 }
 .nav ul li a {
   color: white;
-  text-decoration: none;
+  text-decoration: 30px;
   font-weight: bold;
 }
 .hero-content {
@@ -53,15 +54,40 @@ body {
   max-width: 600px;
 }
 .hero-content h2 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 100px;
+  margin-bottom: 150px;
+  font-weight: bold;
 }
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.p1 {
+  position: absolute; /* Mueve el texto libremente */
+  top: 140px;          /* Distancia desde la parte superior */
+  left: 900px;         /* Distancia desde la izquierda */
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5;
+
 }
+
+.p2 {
+  position: absolute; /* Mueve el texto libremente */
+  top: 140px;          /* Distancia desde la parte superior */
+  right: 800px;         /* Distancia desde la izquierda */
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5;
+
+}
+
+
+
+
+
+
+
+
+
 .cta-button {
-  padding: 12px 24px;
+  padding: 13px 25px;
   border: 2px solid white;
   background: transparent;
   color: white;
@@ -99,8 +125,112 @@ body {
 }
 .about-text h2 {
   font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
+
+
+
+
+
+/* Contenedor principal de la sección "market" */
+.market-container {
+  display: flex;                  /* Usa flexbox para alinear los elementos internos */
+  justify-content: center;       /* Centra horizontalmente el contenido */
+  align-items: center;           /* Centra verticalmente (en caso de varias líneas) */
+  padding: 40px 20px;            /* Espaciado interno alrededor del contenido */
+}
+
+/* Contenedor que agrupa imagen y texto */
+.market-content {
+  display: flex;                 /* Activa Flexbox */
+  flex-direction: row-reverse;  /* Imagen a la derecha, texto a la izquierda */
+  align-items: center;          /* Centra verticalmente */
+  gap: 40px;                    /* Espacio entre imagen y texto */
+  max-width: 1000px;            /* Ancho máximo del contenido */
+  flex-wrap: wrap;              /* Permite que los elementos se acomoden en varias líneas si no caben */
+}
+
+/* Imagen del mercado */
+.market-image img {
+  width: 300px;                 /* Ancho fijo de la imagen */
+  height: auto;                 /* Altura automática proporcional al ancho */
+  border-radius: 10px;          /* Bordes redondeados para un diseño más suave */
+}
+
+/* Contenedor del texto */
+.market-text {
+  max-width: 500px;             /* Limita el ancho del texto para mejor legibilidad */
+}
+
+/* Estilos responsivos para móviles o pantallas pequeñas */
+@media (max-width: 768px) {
+  .market-content {
+    flex-direction: column;     /* Apila los elementos verticalmente (imagen arriba, texto abajo) */
+    text-align: center;         /* Centra el texto en pantallas pequeñas */
+  }
+
+  .market-text, .market-image img {
+    max-width: 100%;            /* Ocupan todo el ancho disponible en pantallas pequeñas */
+    width: 100%;
+  }
+}
+
+
+
+
+/* Contenedor principal de la sección Retainer */
+.retainer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Agrupa la imagen y el texto */
+.retainer-content {
+  display: flex;
+  flex-direction: row; /* Cambia a row-reverse si quieres la imagen a la derecha */
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  flex-wrap: wrap;
+}
+
+/* Imagen de la sección Retainer */
+.retainer-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto de la sección Retainer */
+.retainer-text {
+  max-width: 500px;
+}
+
+/* Diseño responsivo para móviles */
+@media (max-width: 768px) {
+  .retainer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .retainer-text,
+  .retainer-image img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .about-text h3 {
   font-size: 24px;
   margin-top: 20px;
@@ -110,11 +240,10 @@ body {
   padding-left: 20px;
 }
 .site-footer {
-  background-color: #002b45;
+  background-color: #1e2a38;
   color: #e0e0e0;
   padding: 60px 20px;
   text-align: center;
-  border-top: 4px solid #ffcc00;
   font-size: 18px;
 }
 .site-footer h3 {
@@ -151,7 +280,7 @@ body {
   }
   .nav ul li {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
   }
   .hero-content h2 {
     font-size: 32px;
