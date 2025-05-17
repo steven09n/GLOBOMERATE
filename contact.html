@@ -6,32 +6,36 @@
   <title>Contact - Globomerate</title>
   <link rel="stylesheet" href="conts.css" />
 
-  <!-- AOS Animation CSS -->
+  <!-- AOS Animation (opcional) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <div class="wrapper">
 
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
-      <h1 class="logo" data-aos="fade-down">GLOBOMERATE</h1>
+      <h1 class="logo">GLOBOMERATE</h1>
+
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle">☰</button>
+
       <ul class="nav-links">
-        <li><a href="index.html" data-aos="fade-right">Home</a></li>
-        <li><a href="services.html" data-aos="fade-right">Services</a></li>
-        <li><a href="index.html#about" data-aos="fade-right">About</a></li>
-        <li><a href="index.html#market" data-aos="fade-right">Market</a></li>
-        <li><a href="index.html#retainer" data-aos="fade-right">Retainer</a></li>
-        <li><a class="active" href="contact.html" data-aos="fade-right">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#retainer">Retainer</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Header -->
+    <!-- Encabezado -->
     <div class="hero-content">
       <h2>Contact Us</h2>
     </div>
 
-    <!-- Main content -->
+    <!-- Contenido principal -->
     <main class="main-content">
       <p class="intro">
         Please fill out the form below or email us with a description of your needs.
@@ -64,7 +68,7 @@
       </form>
     </main>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer>
       <h3>Contact Us</h3>
       <p><a href="mailto:info@globomerate.com">info@globomerate.com</a></p>
@@ -73,10 +77,18 @@
 
   </div>
 
-  <!-- AOS Animation JS -->
+  <!-- AOS Animation -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <!-- Toggle para menú móvil -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>

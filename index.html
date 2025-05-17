@@ -12,7 +12,8 @@
     <div class="overlay">
       <div class="nav">
         <h1 class="logo" data-aos="fade-down">GLOBOMERATE</h1>
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul id="nav-links">
           <li><a href="index.html" data-aos="fade-right">Home</a></li>
           <li><a href="services.html" data-aos="fade-right">Services</a></li>
           <li><a href="index.html#about" data-aos="fade-right">About</a></li>
@@ -29,17 +30,17 @@
     </div>
   </header>
 
-<section id="about" class="full-section">
-  <div class="about-container">
-    <div class="about-image" data-aos="fade-right">
-      <img src="25.png" alt="Sales Coordinator">
+  <section id="about" class="full-section">
+    <div class="about-container">
+      <div class="about-image" data-aos="fade-right">
+        <img src="25.png" alt="Sales Coordinator">
+      </div>
+      <div class="about-text" data-aos="fade-left">
+        <h2>About</h2>
+        <p>We work with a few clients on a regular and full-time basis, and sometimes may refuse assignments if fully committed.</p>
+      </div>
     </div>
-    <div class="about-text" data-aos="fade-left">
-      <h2>About</h2>
-      <p>We work with a few clients on a regular and full-time basis, and sometimes may refuse assignments if fully committed.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="market" class="full-section alt-bg" data-aos="fade-up">
     <div class="market-container">
@@ -81,11 +82,24 @@
     </div>
   </footer>
 
+  <!-- AOS Animation -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
       duration: 1000,
       once: true
+    });
+  </script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+      });
     });
   </script>
 </body>
