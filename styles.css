@@ -1,24 +1,57 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
+  width: 100%;
+  height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #1e2a38;
 }
 
 .hero {
   background: url('2mun.png') no-repeat center center/cover;
   height: 100vh;
+  min-width: 100%;
   position: relative;
+}
+
+/* Encabezado de página */
+.hero-content {
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+  padding: 2rem 1rem;
+  max-width: 100%;
+
+}
+
+.space_between {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  max-width: 1000px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content h2 {
+  font-size: 100px;
+  font-weight: bold;
 }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
+  width: 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -27,11 +60,63 @@ body {
   padding: 20px;
 }
 
+.central {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Desvío vertical */
+  top: 45%;
+}
+
+.one {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* margin-right: 15rem; */
+}
+
+.two {
+  /* margin-left: 15rem; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.three {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.p1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+  /* width: 400px; */
+}
+
+.p2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+  /* width: 400px; */
+}
+
+
 .nav {
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 30px 40px;
+  padding: 3rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +137,6 @@ body {
 
 .nav ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
   gap: 3rem;
   font-size: 20px;
 }
@@ -64,34 +147,62 @@ body {
   font-weight: bold;
 }
 
-.hero-content {
-  text-align: center;
-  max-width: 600px;
+
+/* Wrapper que usa flexbox para pegar el footer abajo */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.hero-content h2 {
-  font-size: 100px;
-  margin-bottom: 150px;
+/* Navbar */
+.navbar {
+  /* background-color: #1e2a38; */
+  position: absolute !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: #f8f7f4;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
-.p1 {
-  position: absolute;
-  top: 140px;
-  left: 900px;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 5px;
+/* Botón del menú móvil */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.p2 {
-  position: absolute;
-  top: 140px;
-  right: 800px;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 5px;
+/* Navegación */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
 }
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #f7f6f3;
+}
+
+
 
 .cta-button {
   padding: 13px 25px;
@@ -229,36 +340,67 @@ body {
   text-decoration: underline;
 }
 
+
+
 /* Media Queries */
 @media (max-width: 1024px) {
+  .central{
+    margin-top: 5rem !important;
+   }
+
   .hero-content h2 {
     font-size: 40px;
   }
+  .p1{
+    font-size: 20px;
+  }
+  .p2{
+    font-size: 20px;
+  }
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
-  .nav {
+  .menu-toggle {
+    display: block;
+  }
+
+  /*se agrego z-index = 1 para superponer el navbar sobre el hero*/
+  .nav-links {
+    display: none;
     flex-direction: column;
+    background-color: #1e2a38;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar {
     align-items: flex-start;
   }
 
-  .nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav ul li {
-    margin-left: 0;
-    margin-bottom: 100px;
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
   }
 
   .hero-content h2 {
-    font-size: 32px;
+    font-size: 25px;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .cta-button {
@@ -292,48 +434,89 @@ body {
     width: 100%;
   }
 
-  .menu-toggle {
-    display: block;
+
+  .p1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
   }
 
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #1e2a38;
-    width: 100%;
-    padding: 20px;
+  .p2 {
+    position: relative;
+    top: auto;
+    right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
   }
 
-  .nav ul.show {
-    display: flex;
-  }
 
-  .nav ul li {
-    margin: 10px 0;
-  }
 }
 
 @media (max-width: 480px) {
-  .nav {
-    align-items: center;
-    text-align: center;
+  .hero-content .h2{
+    font-size: 12px !important;
+  }
+  .p1{
+    font-size: 12px !important;
+  }
+  .p2{
+    font-size: 12px !important;
+  }
+  
+  .logo {
+    /* font-size: 1.8rem; */
+    font-size: 2.5rem !important;
   }
 
-  .nav .logo {
-    font-size: 20px;
-    max-width: 90%;
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.2;
-    text-align: center;
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+/* 
+  .one {
+
+    margin-top: 4rem;
+  }
+
+  .two {
+    margin-top: 4rem;
+
+  }
+
+  .three {
+    margin-top: 4rem;
+  } */
+   .central{
+    margin-top: 6rem !important;
+   }
+
+  .logo {
+    font-size: 35px !important;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
   }
 
   .hero-content h2 {
-    font-size: 26px;
+    font-size: 15px;
   }
 
-  .site-footer {
-    font-size: 16px;
+  .hero-content p {
+    font-size: 10px;
   }
 }
