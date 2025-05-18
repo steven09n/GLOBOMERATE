@@ -344,17 +344,16 @@ body {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .central{
-    margin-top: 5rem !important;
-   }
 
   .hero-content h2 {
     font-size: 40px;
   }
-  .p1{
+
+  .p1 {
     font-size: 20px;
   }
-  .p2{
+
+  .p2 {
     font-size: 20px;
   }
 }
@@ -457,18 +456,22 @@ body {
 }
 
 @media (max-width: 480px) {
-  .hero-content .h2{
+  .nav {
+    justify-content: center !important;
+  }
+  .hero-content .h2 {
     font-size: 12px !important;
   }
-  .p1{
+
+  .p1 {
     font-size: 12px !important;
   }
-  .p2{
+
+  .p2 {
     font-size: 12px !important;
   }
-  
+
   .logo {
-    /* font-size: 1.8rem; */
     font-size: 2.5rem !important;
   }
 
@@ -478,24 +481,6 @@ body {
 }
 
 @media (max-width: 390px) {
-/* 
-  .one {
-
-    margin-top: 4rem;
-  }
-
-  .two {
-    margin-top: 4rem;
-
-  }
-
-  .three {
-    margin-top: 4rem;
-  } */
-   .central{
-    margin-top: 6rem !important;
-   }
-
   .logo {
     font-size: 35px !important;
   }
@@ -519,4 +504,24 @@ body {
   .hero-content p {
     font-size: 10px;
   }
+
+
+}
+
+@media (max-width: 360px) and (orientation: landscape) {
+
+  /* Estilos para orientación horizontal */
+  .central {
+    margin-top: 5rem !important;
+  }
+
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+
+  /* Estilos para orientación horizontal */
+  .central {
+    margin-top: 5rem !important;
+  }
+
 }

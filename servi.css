@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   /* height: 100%; */
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
@@ -141,11 +142,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.card{
-  box-shadow:0.5px 0.5px 0.5px rgba(0, 0, 0, 0.185);
+.card {
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.185);
   border-radius: 15px !important;
-  min-width: 350px ;
-  min-height: 350px ;
+  min-width: 350px;
+  min-height: 350px;
 }
 
 .image img {
@@ -153,11 +154,13 @@ footer a:hover {
   max-width: 300px;
   border-radius: 10px;
 }
-.image{
+
+.image {
   display: flex;
   justify-content: center;
-  margin-bottom:1rem ;
+  margin-bottom: 1rem;
 }
+
 /* Media queries */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -186,6 +189,10 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
+  .nav {
+    justify-content: center !important;
+  }
+
   .logo {
     font-size: 1.8rem;
   }
