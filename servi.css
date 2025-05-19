@@ -79,8 +79,10 @@ body {
 /* Contenido principal */
 .main-content {
   flex: 1;
-  /* max-width: 800px; */
-  margin: 2rem auto;
+  margin-top: 140px;
+  margin-bottom: 180px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem;
 }
 

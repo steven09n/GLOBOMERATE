@@ -26,22 +26,25 @@
           <ul class="nav-links" id="nav-links">
             <li><a href="index.html" data-aos="fade-right">Home</a></li>
             <li><a href="services.html" data-aos="fade-right">Services</a></li>
-            <li><a href="index.html#about" data-aos="fade-right">About</a></li>
-            <li><a href="index.html#market" data-aos="fade-right">Market</a></li>
-            <li><a href="index.html#retainer" data-aos="fade-right">Retainer</a></li>
+            <li><a data-aos="fade-right" onclick="scrollToCenterById('about')">About</a></li>
+            <li><a data-aos="fade-right" onclick="scrollToCenterById('market')">Market</a></li>
+            <li><a data-aos="fade-right" onclick="scrollToCenterById('retainer')">Retainer</a></li>
             <li><a href="contact.html" data-aos="fade-right">Contact</a></li>
           </ul>
         </nav>
         <div class="hero-content row">
           <div class="central" style="justify-content: center;">
-            <div class="one col-3" data-aos="fade-down">
+            <div class="one col-2" data-aos="fade-down">
               <p class="p1">We help US and international companies thrive globally</p>
             </div>
-            <div class="two col">
+            <div class="col-1"></div>
+            <div class="two col-4">
               <h2 data-aos="fade-in">International Business Consulting</h2>
             </div>
-            <div class="three col-3" data-aos="fade-down">
-              <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.We help US and international companies thrive globally.</p>
+            <div class="col-1"></div>
+            <div class="three col-2" data-aos="fade-down">
+              <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.We help US and international
+                companies thrive globally.</p>
             </div>
           </div>
         </div>
@@ -50,14 +53,16 @@
     <!-- About -->
     <section id="about" class="full-section">
       <div class="about-container">
-        <div class="about-image" data-aos="fade-right">
-          <img src="25.png" alt="Sales Coordinator">
-        </div>
-        <div class="about-text" data-aos="fade-left">
-          <h2>About</h2>
-          <p>We work with a few clients on a regular and full-time basis, and sometimes may refuse assignments
-            if fully
-            committed.</p>
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right">
+            <img src="25.png" alt="Sales Coordinator">
+          </div>
+          <div class="about-text" data-aos="fade-left">
+            <h2>About</h2>
+            <p>We work with a few clients on a regular and full-time basis, and sometimes may refuse assignments
+              if fully
+              committed.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -120,6 +125,45 @@
   <script>
     document.querySelector('.menu-toggle').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+  <script>
+    function scrollToCenterById(id) {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + window.scrollY;
+      const elementHeight = rect.height;
+      const viewportHeight = window.innerHeight;
+
+      const scrollTo = elementTop - (viewportHeight / 2) + (elementHeight / 2);
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: 'smooth'
+      });
+    }
+
+    // Espera que el DOM cargue completamente
+    window.addEventListener('DOMContentLoaded', () => {
+      // Si se accedió a esta página con #sectionX desde otra pagina html
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        // se espera a que el navegar haga su efecto de scroll normal, pero se anula para poder centrar la seccion 
+        setTimeout(() => {
+          scrollToCenterById(id);
+        }, 100);
+      }
+      //interceptar todos los clicks en links internos para centrar también
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const id = this.getAttribute('href').substring(1);
+          history.pushState(null, null, `#${id}`); // Actualiza la URL
+          scrollToCenterById(id);
+        });
+      });
     });
   </script>
 </body>

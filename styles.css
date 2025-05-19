@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -12,6 +13,16 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #1e2a38;
+}
+
+section {
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  /* font-size: 2rem; */
+  /* color: white; */
 }
 
 .hero {
@@ -64,7 +75,7 @@ body {
   align-items: center;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -87,6 +98,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 .three {
@@ -152,6 +164,8 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
   min-height: 100vh;
 }
 
@@ -228,6 +242,10 @@ body {
   margin: 0 auto;
 }
 
+#about {
+  margin-top: 80px;
+}
+
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -235,6 +253,15 @@ body {
   justify-content: center;
   gap: 40px;
   padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  /* flex-wrap: wrap; */
 }
 
 .about-image img {
@@ -245,7 +272,7 @@ body {
 
 .about-text {
   max-width: 500px;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .about-text h2 {
@@ -266,17 +293,22 @@ body {
   align-items: center;
   gap: 40px;
   max-width: 1000px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .market-image img {
-  width: 300px;
-  height: auto;
+  width: 100%;
+  max-width: 500px;
   border-radius: 10px;
 }
 
 .market-text {
   max-width: 500px;
+}
+
+.market-text h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .retainer-container {
@@ -292,17 +324,22 @@ body {
   align-items: center;
   gap: 40px;
   max-width: 1000px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .retainer-image img {
-  width: 300px;
-  height: auto;
+  width: 100%;
+  max-width: 500px;
   border-radius: 10px;
 }
 
 .retainer-text {
   max-width: 500px;
+}
+
+.retainer-text h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .about-text h3 {
@@ -321,6 +358,7 @@ body {
   padding: 60px 20px;
   text-align: center;
   font-size: 18px;
+  margin-top: 120px;
 }
 
 .site-footer h3 {
@@ -340,7 +378,20 @@ body {
   text-decoration: underline;
 }
 
+@media (max-width: 1170px) {
 
+  .hero-content h2 {
+    font-size: 50px;
+  }
+
+  .p1 {
+    font-size: 25px;
+  }
+
+  .p2 {
+    font-size: 25px;
+  }
+}
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -395,7 +446,7 @@ body {
   }
 
   .hero-content h2 {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .hero-content p {
@@ -409,6 +460,17 @@ body {
 
   .about-text {
     text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image img {
+    max-width: 100%;
+    width: 100%;
   }
 
   .market-content {
@@ -459,6 +521,7 @@ body {
   .nav {
     justify-content: center !important;
   }
+
   .hero-content .h2 {
     font-size: 12px !important;
   }
