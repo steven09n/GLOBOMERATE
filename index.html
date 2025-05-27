@@ -3,169 +3,79 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Globomerate</title>
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- AOS Animation (opcional) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventora Services - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="hero">
-      <div class="overlay">
-        <!-- se agrego la clase navbar para que aparezca el toggle button -->
-        <nav class="navbar nav">
-          <h1 class="logo" data-aos="fade-down">GLOBOMERATE</h1>
-          <!-- Botón de menú móvil -->
-          <button class="menu-toggle">☰</button>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" data-aos="fade-right">Home</a></li>
-            <li><a href="services.html" data-aos="fade-right">Services</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('about')">About</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('market')">Market</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('retainer')">Retainer</a></li>
-            <li><a href="contact.html" data-aos="fade-right">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="hero-content row">
-          <div class="central" style="justify-content: center;">
-            <div class="one col-2" data-aos="fade-down">
-              <p class="p1">We help US and international companies thrive globally</p>
-            </div>
-            <div class="col-1"></div>
-            <div class="two col-4">
-              <h2 data-aos="fade-in">International Business Consulting</h2>
-            </div>
-            <div class="col-1"></div>
-            <div class="three col-2" data-aos="fade-down">
-              <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.We help US and international
-                companies thrive globally.</p>
-            </div>
-          </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>VENTORA SERVICES</h1>
+        <p>Administrative services for your needs</p>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="getintouch.html">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with the provided image -->
+  <section class="hero">
+    <div class="hero-image-container">
+      <img src="12.jpg" alt="Virtual assistant managing digital interfaces and data" class="hero-background">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h2>Your Virtual Office Solution</h2>
+          <p>Professional administrative support tailored to your business needs</p>
+          <a href="getintouch.html" class="btn">Get Started Today</a>
         </div>
       </div>
-    </header>
-    <!-- About -->
-    <section id="about" class="full-section">
-      <div class="about-container">
-        <div class="about-content">
-          <div class="about-image" data-aos="fade-right">
-            <img src="25.png" alt="Sales Coordinator">
-          </div>
-          <div class="about-text" data-aos="fade-left">
-            <h2>About</h2>
-            <p>We work with a few clients on a regular and full-time basis, and sometimes may refuse assignments
-              if fully
-              committed.</p>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="container_section">
+      <div class="card">
+        <p>We can help run your office and/or be your virtual assistant based on your specific needs.</p>
+
+        <p>The focus and the quality of our work differentiates us, try us to find out how we can improve efficiency in
+          your
+          office clerical tasks and office management functions.</p>
+
+        <p>We act as your remote employee(s) or department(s) with a fixed hourly billing cost or contract basis, which
+          may
+          help you save headaches in operations and money on payroll and overhead, while bringing that human touch to
+          your
+          company.</p>
+
+        <p>Our fee is based on the volume of work and hours, so the more regular you are the lower the fee will be, and
+          it
+          is negotiable on a case-by-case basis.</p>
       </div>
     </section>
-    <!-- Market -->
-    <section id="market" class="full-section alt-bg" data-aos="fade-up">
-      <div class="market-container">
-        <div class="market-content">
-          <div class="market-image" data-aos="fade-up">
-            <img src="25.png" alt="Market Image">
-          </div>
-          <div class="market-text" data-aos="fade-up">
-            <h2>Market</h2>
-            <p>Our clients are mainly US companies seeking assistance in the US and abroad, with contacts
-              worldwide in
-              different fields.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Retainer -->
-    <section id="retainer" class="full-section" data-aos="fade-up">
-      <div class="retainer-container">
-        <div class="retainer-content">
-          <div class="retainer-image" data-aos="fade-up">
-            <img src="25.png" alt="Retainer Image">
-          </div>
-          <div class="retainer-text" data-aos="fade-up">
-            <h2>Retainer</h2>
-            <p>We establish retainer and billing structures case-by-case — either one-time or recurring,
-              depending on
-              the workload.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="site-footer" data-aos="fade-up">
-      <div class="footer-container">
-        <h3 data-aos="fade-up">Contact Us</h3>
-        <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
-            data-aos="fade-up">info@globomerate.com</a></p>
-        <p data-aos="fade-up">
-          Globomerate, LLC<br>
-          Newark, DE, USA<br>
-          855-549-5040
-        </p>
-      </div>
-    </footer>
+  </main>
 
-  </div>
-  <!-- AOS Animation -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <footer>
+    <p>&copy; 2025 Ventora Services. All rights reserved.</p>
+  </footer>
+
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
-  <!-- Toggle para menú móvil -->
-  <script>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('show');
-    });
-  </script>
-  <script>
-    function scrollToCenterById(id) {
-      const element = document.getElementById(id);
-      if (!element) return;
-
-      const rect = element.getBoundingClientRect();
-      const elementTop = rect.top + window.scrollY;
-      const elementHeight = rect.height;
-      const viewportHeight = window.innerHeight;
-
-      const scrollTo = elementTop - (viewportHeight / 2) + (elementHeight / 2);
-
-      window.scrollTo({
-        top: scrollTo,
-        behavior: 'smooth'
-      });
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("active");
     }
-
-    // Espera que el DOM cargue completamente
-    window.addEventListener('DOMContentLoaded', () => {
-      // Si se accedió a esta página con #sectionX desde otra pagina html
-      if (window.location.hash) {
-        const id = window.location.hash.substring(1);
-        // se espera a que el navegar haga su efecto de scroll normal, pero se anula para poder centrar la seccion 
-        setTimeout(() => {
-          scrollToCenterById(id);
-        }, 100);
-      }
-      //interceptar todos los clicks en links internos para centrar también
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const id = this.getAttribute('href').substring(1);
-          history.pushState(null, null, `#${id}`); // Actualiza la URL
-          scrollToCenterById(id);
-        });
-      });
-    });
   </script>
+
 </body>
 
 </html>
