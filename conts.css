@@ -8,11 +8,15 @@
 html,
 body {
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif !important;
   background-color: #f9f9f9;
   color: #1e2a38;
 }
 
+h2{
+  font-size: 2rem;
+font-weight: bold;
+}
 /* Wrapper que usa flexbox para pegar el footer abajo */
 .wrapper {
   display: flex;
@@ -125,21 +129,63 @@ button:hover {
   background-color: #1e2a38;
 }
 
-/* Footer */
-footer {
+
+.site-footer {
   background-color: #1e2a38;
-  color: white;
+  color: #e0e0e0;
+  padding: 60px 20px;
   text-align: center;
-  padding: 2rem 1rem;
+  font-size: 18px;
+  margin-top: 120px;
 }
 
-footer a {
-  color: #f0c040;
+.site-footer h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.site-footer a {
+  color: #ffcc00;
   text-decoration: none;
+  font-weight: bold;
 }
 
-footer a:hover {
+.site-footer a:hover {
   text-decoration: underline;
+}
+
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+  background-color: #555;
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+
+  /* Estilos para orientación horizontal */
+  .central {
+    margin-top: 5rem !important;
+  }
+
 }
 
 /* Responsividad */
