@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Globomerate</title>
+  <link rel="stylesheet" href="conts.css" />
+
+  <!-- AOS Animation (opcional) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="navbar nav">
+      <h1 class="logo">GLOBOMERATE</h1>
+
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#retainer">Retainer</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <div class="hero-content">
+      <h2 style="font-family: 'Segoe UI', sans-serif !important;">Contact Us</h2>
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <p class="intro">
+        Please fill out the form below or email us with a description of your needs.
+        We will respond within one business day with a quote or estimate. If there is mutual interest,
+        we can proceed with a retainer agreement.
+      </p>
+
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div>
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </main>
+
+    <!-- Pie de página -->
+    <!-- Footer -->
+    <footer class="site-footer" data-aos="fade-up">
+      <div class="footer-container">
+        <h3 data-aos="fade-up">Contact Us</h3>
+        <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
+            data-aos="fade-up">info@globomerate.com</a></p>
+        <p data-aos="fade-up">
+          Globomerate, LLC<br>
+          Newark, DE, USA<br>
+          855-549-5040
+        </p>
+      </div>
+      <div class="footer-links" data-aos="fade-up">
+        <a href="terms.html" class="footer-button">Terms</a>
+        <a href="privacy.html" class="footer-button">Privacy</a>
+        <a href="refunds.html" class="footer-button">Refunds</a>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- Toggle para menú móvil -->
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+
+</body>
+
+</html>
