@@ -94,17 +94,23 @@ h2 {
 .strong {
   text-align: center;
   margin: 5rem;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.intro {
-  font-size: 1.4rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-strong .intro {
+strong {
+  font-weight: normal;
   font-family: 'Segoe UI', sans-serif !important;
 }
+
+.main-content strong {
+  font-weight: normal !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+
+
+
 
 /* Formulario de contacto */
 form {
@@ -147,7 +153,7 @@ button:hover {
   padding: 60px 20px;
   text-align: center;
   font-size: 18px;
-  margin-top: 120px;
+  margin-top: 0px;
 }
 
 .site-footer h3 {
