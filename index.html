@@ -3,174 +3,171 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Globomerate</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventora Services - Home</title>
 
-  <!-- AOS Animation (opcional) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header class="hero">
-      <div class="overlay">
-        <!-- se agrego la clase navbar para que aparezca el toggle button -->
-        <nav class="navbar nav">
-          <h1 class="logo" data-aos="fade-down">GLOBOMERATE</h1>
-          <!-- Botón de menú móvil -->
-          <button class="menu-toggle">☰</button>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" data-aos="fade-right">Home</a></li>
-            <li><a href="services.html" data-aos="fade-right">Services</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('about')">About</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('market')">Market</a></li>
-            <li><a data-aos="fade-right" onclick="scrollToCenterById('retainer')">Retainer</a></li>
-            <li><a href="contact.html" data-aos="fade-right">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="hero-content row">
-          <div class="central" style="justify-content: center;">
-            <div class="one col-2" data-aos="fade-down">
-              <p class="p1">We help US and international companies thrive globally</p>
-            </div>
-            <div class="col-1"></div>
-            <div class="two col-4">
-              <h2 data-aos="fade-in">International Business Consulting</h2>
-            </div>
-            <div class="col-1"></div>
-            <div class="three col-2" data-aos="fade-down">
-              <p class="p2">We partner with domestic and international clients to navigate global opportunities</p>
-            </div>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>VENTORA SERVICES</h1>
+        <p>Administrative services for your needs</p>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="getintouch.html">Get in Touch</a>
+        <a href="Policies.html">Terms & Policies</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image-container">
+      <img src="12.jpg" alt="Virtual assistant managing digital interfaces and data" class="hero-background">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h2>Your Virtual Office Solution</h2>
+          <p>Professional administrative support tailored to your business needs</p>
+          <a href="getintouch.html" class="btn">Get Started Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de título centrado -->
+  <section class="container_section_title">
+    <h2 class="text-center-index mb-4 custom-title">Office Support That Adapts to You</h2>
+  </section>
+
+  <!-- Sección de cuadros -->
+  <section class="container_section" style="display: flex; justify-content: center;">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" data-aos="zoom-in"
+      data-aos-duration="1000">
+      <div class="col" style="display: flex; justify-content: end;">
+        <div class="card h-100 card_index">
+          <div class="icon" style=" display: flex; justify-content: center;">
+            <i class="fas fa-user-clock fa-2x "></i>
+          </div>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title-index">We support your office operations and virtual assistant needs with flexible, tailored solutions.</h5>
+            <p>Whether you need help running your day-to-day office functions or require a reliable virtual assistant, our services are customized to fit your exact requirements.
           </div>
         </div>
       </div>
-    </header>
-    <!-- About -->
-    <section id="about" class="full-section">
-      <div class="about-container">
-        <div class="about-content">
-          <div class="about-image" data-aos="fade-right">
-            <img src="25.png" alt="Sales Coordinator">
+      <div class="col" style=" display: flex; justify-content: start;">
+        <div class="card h-100 card_index">
+          <div class="icon" style=" display: flex; justify-content: center;">
+            <i class="fas fa-chart-line fa-2x"></i>
           </div>
-          <div class="about-text" data-aos="fade-left">
-            <h2>About</h2>
-            <p>We work with a limited number of clients on a regular, full-time basis. As a result, we may occasionally
-              decline new assignments when our capacity is fully committed.
-            </p>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title-index">What sets us apart is our focus and quality.</h5>
+            <p class="">We take pride in the precision and care we bring to clerical tasks, office coordination, and administrative management. Let us show you how we can improve your operational efficiency.</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Market -->
-    <section id="market" class="full-section alt-bg" data-aos="fade-up">
-      <div class="market-container">
-        <div class="market-content">
-          <div class="market-image" data-aos="fade-up">
-            <img src="martk1.png" alt="Market Image">
+      <div class="col" style=" display: flex; justify-content: end;">
+        <div class="card h-100 card_index">
+          <div class="icon" style=" display: flex; justify-content: center ;">
+            <i class="fas fa-network-wired fa-2x"></i>
           </div>
-          <div class="market-text" data-aos="fade-up">
-            <h2>Market</h2>
-            <p>Our clients are primarily U.S.-based companies seeking support both domestically and internationally,
-              leveraging our global network of contacts across various industries.</p>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title-index">We work as your remote employee or department.</h5>
+            <p>Engage us on an hourly or contract basis and benefit from reduced overhead, payroll savings, and fewer operational headaches without losing the human touch
           </div>
         </div>
       </div>
-    </section>
-    <!-- Retainer -->
-    <section id="retainer" class="full-section" data-aos="fade-up">
-      <div class="retainer-container">
-        <div class="retainer-content">
-          <div class="retainer-image" data-aos="fade-up">
-            <img src="aa.png" alt="Retainer Image">
+      <div class="col" style=" display: flex; justify-content: start;">
+        <div class="card h-100 card_index">
+          <div class="icon" style=" display: flex; justify-content: center;">
+            <i class="fas fa-dollar-sign fa-2x"></i>
           </div>
-          <div class="retainer-text" data-aos="fade-up">
-            <h2>Retainer</h2>
-            <p>Our retainer and billing structures are established on a case-by-case basis. Smaller assignments may be
-              billed as a one-time fee, while
-              ongoing projects are typically invoiced weekly or at intervals ranging from a few days to monthly,
-              depending on the workload.</p>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title-index">Our pricing is volume-based and flexible.</h5>
+            <p>The more consistent your needs, the more competitive your rate. Fees are negotiable and established on a case-by-case basis based on scope and frequency.</p>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Footer -->
-    <footer class="site-footer" data-aos="fade-up">
-      <div class="footer-container">
-        <h3 data-aos="fade-up">Contact Us</h3>
-        <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
-            data-aos="fade-up">info@globomerate.com</a></p>
-        <p data-aos="fade-up">
-          Globomerate, LLC<br>
-          Newark, DE, USA<br>
-          855-549-5040
-        </p>
-      </div>
-      <div class="footer-links" data-aos="fade-up">
-        <a href="terms.html" class="footer-button">Terms</a>
-        <a href="privacy.html" class="footer-button">Privacy</a>
-        <a href="refunds.html" class="footer-button">Refunds</a>
       </div>
 
-    </footer>
+    </div>
+    </div>
 
-  </div>
-  <!-- AOS Animation -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+
+    <!-- 
+
+    <div class="row gx-5 gy-5 justify-content-center">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="custom-box">
+          <i class="fas fa-user-clock fa-2x icon"></i>
+          <h5 class="custom-text">Virtual Assistance</h5>
+          <p class="custom-text">We help run your office or act as your virtual assistant based on your specific needs.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="custom-box">
+          <i class="fas fa-chart-line fa-2x icon"></i>
+          <h5 class="custom-text">Efficiency & Quality</h5>
+          <p class="custom-text">Our work quality stands out. Improve your clerical and office tasks with us.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="custom-box">
+          <i class="fas fa-network-wired fa-2x icon"></i>
+          <h5 class="custom-text">Remote Team</h5>
+          <p class="custom-text">We act as your remote staff with fixed rates, saving on payroll and operations costs.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="custom-box">
+          <i class="fas fa-dollar-sign fa-2x icon"></i>
+          <h5 class="custom-text">Flexible Pricing</h5>
+          <p class="custom-text">Our fees adapt to your workload — regular work means lower costs. Negotiable rates.</p>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <footer>
+    <p class="text-center py-3">&copy; 2025 Ventora Services. All rights reserved.</p>
+  </footer>
+
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
-  <!-- Toggle para menú móvil -->
-  <script>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('show');
-    });
-  </script>
-  <script>
-    function scrollToCenterById(id) {
-      const element = document.getElementById(id);
-      if (!element) return;
-
-      const rect = element.getBoundingClientRect();
-      const elementTop = rect.top + window.scrollY;
-      const elementHeight = rect.height;
-      const viewportHeight = window.innerHeight;
-
-      const scrollTo = elementTop - (viewportHeight / 2) + (elementHeight / 2);
-
-      window.scrollTo({
-        top: scrollTo,
-        behavior: 'smooth'
-      });
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("active");
     }
-
-    // Espera que el DOM cargue completamente
-    window.addEventListener('DOMContentLoaded', () => {
-      // Si se accedió a esta página con #sectionX desde otra pagina html
-      if (window.location.hash) {
-        const id = window.location.hash.substring(1);
-        // se espera a que el navegar haga su efecto de scroll normal, pero se anula para poder centrar la seccion 
-        setTimeout(() => {
-          scrollToCenterById(id);
-        }, 100);
-      }
-      //interceptar todos los clicks en links internos para centrar también
-      document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const id = this.getAttribute('href').substring(1);
-          history.pushState(null, null, `#${id}`); // Actualiza la URL
-          scrollToCenterById(id);
-        });
-      });
-    });
   </script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 
 </html>
