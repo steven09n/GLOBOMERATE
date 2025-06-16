@@ -8,7 +8,7 @@
 html,
 body {
   /* height: 100%; */
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', sans-serif !important;
   background-color: #f9f9f9;
   color: #1e2a38;
 }
@@ -94,7 +94,7 @@ h2 {
 .strong {
   text-align: center;
   margin: 5rem;
-  font-size: 18px;
+  font-size: 23px;
   font-weight: normal;
 }
 
