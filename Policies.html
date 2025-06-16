@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventora Services - Terms & Policies</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>VENTORA SERVICES</h1>
+        <p>Administrative services for your needs</p>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="getintouch.html">Get in Touch</a>
+        <a href="Policies.html">Terms & Policies</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container_section">
+    <div class="container">
+      <section data-aos="fade-up">
+        <h2 class="text-center mb-4">Services Terms & Policies</h2>
+
+        <p class="lead text-center">
+          At Ventora Services, we value transparency, professionalism, and trust.
+        </p>
+
+        <p class="text-center">
+          To help you understand exactly how we operate, we’ve outlined our key policies and procedures.
+        </p>
+
+        <p class="text-center">
+          Whether you’re booking virtual assistance or ongoing administrative support, our service terms are designed to
+          keep everything clear, fair, and secure.
+        </p>
+
+        <hr class="my-5">
+
+        <div class="list-group d-grid gap-4 col-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <a href="policy1.html" class="list-group-item list-group-item-action">
+            1. Service Agreement & Terms
+          </a>
+          <a href="policy2.html" class="list-group-item list-group-item-action mt-2">
+            2. Privacy Commitment for Admin Services
+          </a>
+          <a href="policy3.html" class="list-group-item list-group-item-action mt-2">
+            3. Service Cancellation & Refund Terms
+          </a>
+          <a href="policy4.html" class="list-group-item list-group-item-action mt-2">
+            4. Remote Assistance Delivery Process
+          </a>
+        </div>
+
+        <div class="text-center mt-5">
+          <p>
+            If you have any questions, feel free to
+            <a href="getintouch.html">contact us</a> — we’re here to help.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <footer>
+    <p class="text-center py-3">&copy; 2025 Ventora Services. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("active");
+    }
+    AOS.init();
+  </script>
+</body>
+
+</html>

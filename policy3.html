@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventora Services - Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>VENTORA SERVICES</h1>
+        <p>Administrative services for your needs</p>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="getintouch.html">Get in Touch</a>
+        <a href="Policies.html">Terms & Policies</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="container_section">
+    <div class="container_policy">
+      <div class="card_policy">
+        <h1>Service Cancellation & Refund Terms</h1>
+        <p>At Ventora, LLC, all services are prepaid, customized, and reserved in advance. Due to the nature of our
+          work,
+          we do not offer refunds under any circumstances. Instead, we provide clients with flexible rescheduling and
+          time
+          credit options to ensure service continuity.</p>
+
+        <section>
+          <h2>1. No Monetary Refunds</h2>
+          <p>All payments are final. Once services are scheduled, time has been reserved and allocated specifically for
+            the client. We do not provide cash refunds, partial refunds, or prorated reimbursements for any reason,
+            including:</p>
+          <ul>
+            <li>Project cancellation by the client</li>
+            <li>Unused service hours</li>
+            <li>Failure to submit tasks or respond on time</li>
+            <li>Dissatisfaction after service has been delivered</li>
+          </ul>
+          <p>This policy ensures fairness, prevents misuse, and allows us to commit fully to each client’s needs.</p>
+        </section>
+
+        <section>
+          <h2>2. Credit Issuance (Time-Based)</h2>
+          <p>If a client provides at least 48 hours’ written notice prior to the scheduled start of a task or billing
+            cycle, we may issue a time credit equal to the unused portion of their service.</p>
+          <p>Time credits:</p>
+          <ul>
+            <li>Are calculated based on the unused portion of prepaid hours</li>
+            <li>Must be used within 120 days of the original purchase date</li>
+            <li>Are non-transferable and non-redeemable for cash</li>
+          </ul>
+          <p>Credits may not be reissued after expiration or due to repeated cancellations.</p>
+        </section>
+
+        <section>
+          <h2>3. Schedule Adjustments & Missed Tasks</h2>
+          <p>Clients may request to reschedule meetings or task deliveries with a minimum of 24 hours' notice. Missed
+            appointments or last-minute cancellations (under 24 hours) will be deducted from the client's active time
+            balance.</p>
+        </section>
+
+        <section>
+          <h2>4. Service Cancellation by the Company</h2>
+          <p>We reserve the right to cancel or pause services if:</p>
+          <ul>
+            <li>The client fails to provide needed information or access</li>
+            <li>Communication is repeatedly delayed</li>
+            <li>Behavior violates professional boundaries</li>
+          </ul>
+          <p>In such cases, unused time may be credited.</p>
+        </section>
+
+        <section>
+          <h2>5. Dispute</h2>
+          <p>We aim to resolve issues professionally. Clients are encouraged to raise concerns in writing. However, no
+            refund consideration will be made for dissatisfaction after service has begun or been delivered, or any time
+            thereafter payment has been made.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="text-center py-3">&copy; 2025 Ventora Services. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("active");
+    }
+    AOS.init();
+  </script>
+</body>
+
+</html>
