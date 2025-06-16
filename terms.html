@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Engagement Terms | Globomerate, LLC</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      color: #004080;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 2rem !important;
+      background-color: #1e2a38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #f8f7f4;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Navegación */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-size: 1rem;
+      margin-bottom: 0 !important;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #f7f6f3;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      margin-top: 120px;
+      /* margin-bottom: 180px; */
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      max-width: 900px;
+    }
+
+    /* Contenedor general */
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .site-footer {
+      background-color: #1e2a38;
+      color: #e0e0e0;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 120px;
+    }
+
+    .site-footer h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .site-footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1000px) and (orientation: landscape) {
+
+      /* Estilos para orientación horizontal */
+      .central {
+        margin-top: 5rem !important;
+      }
+
+    }
+
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-button {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .footer-button:hover {
+      background-color: #555;
+    }
+
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      /*se agrego z-index = 1 para superponer el navbar sobre el hero*/
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1e2a38;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .navbar {
+        align-items: flex-start;
+      }
+
+      .p1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .p2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        justify-content: center !important;
+      }
+
+      .p1 {
+        font-size: 12px !important;
+      }
+
+      .p2 {
+        font-size: 12px !important;
+      }
+
+      .logo {
+        font-size: 2.5rem !important;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar nav">
+      <h1 class="logo">GLOBOMERATE</h1>
+
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#retainer">Retainer</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <div class="content">
+        <header>
+          <h1>Business Engagement Terms</h1>
+          <p><strong>Globomerate, LLC</strong></p>
+        </header>
+
+        <section>
+          <p>Globomerate, LLC offers specialized business consulting, international business services, and worldwide
+            support
+            tailored to professionals, entrepreneurs, and organizations operating across borders. Each engagement is
+            structured according to the unique needs of the client and defined through a clear agreement before services
+            begin.</p>
+        </section>
+
+        <section>
+          <h2>Engagement Structure</h2>
+          <p>We offer the following service formats:</p>
+          <ul>
+            <li><strong>Monthly Advisory Retainers:</strong> For clients needing ongoing support and guidance on
+              operations,
+              international transactions, or compliance.</li>
+            <li><strong>Fixed-Fee Packages:</strong> Custom packages for project-based work, such as entity structure,
+              market
+              development, document preparation, or due diligence.</li>
+            <li><strong>Hourly Consulting:</strong> Ideal for one-off sessions, strategic reviews, or expert insight.
+            </li>
+          </ul>
+          <p>Every project begins with a discovery consultation. Scope, pricing, and deliverables are clearly outlined
+            in
+            a
+            client agreement or invoice prior to work commencement.</p>
+        </section>
+
+        <section>
+          <h2>Service Delivery Options</h2>
+          <ul>
+            <li><strong>Remote engagements:</strong> Conducted via phone, video conference, email, and secure document
+              portals.</li>
+            <li><strong>In-person sessions:</strong> Available to clients within our service area or by travel
+              arrangement.
+              Travel costs and per diem expenses are discussed and agreed upon in writing prior to scheduling.</li>
+          </ul>
+          <p>We reserve the right to decline in-person meetings when remote delivery is more appropriate for the scope
+            or
+            location.</p>
+        </section>
+
+        <section>
+          <h2>Communication & Timeline</h2>
+          <p>Business hours are typically Monday to Friday, 9 AM–5 PM EST. Clients are expected to respond to requests
+            for
+            information in a timely manner to avoid delays.</p>
+          <p>Turnaround times vary depending on the type of engagement, but typical timelines are communicated during
+            the
+            onboarding process. Delays caused by client-side issues (missing documents, lack of payment, or no
+            communication)
+            will not be attributed to the consultant.</p>
+        </section>
+
+        <section>
+          <h2>Agreement Confirmation</h2>
+          <p>All services are considered active once:</p>
+          <ul>
+            <li>A written agreement or invoice has been acknowledged via email or signature</li>
+            <li>Payment has been received or a scheduled retainer has begun</li>
+          </ul>
+          <p>We do not begin work on verbal instructions or unsigned proposals.</p>
+        </section>
+
+        <section>
+          <h2>Scope Adjustments</h2>
+          <p>If the scope of work changes after an agreement is confirmed, a new quote or service addendum will be
+            issued.
+            Work outside the scope will not be performed without prior written approval.</p>
+        </section>
+
+        <section>
+          <h2>Suspension or Termination</h2>
+          <p>Services may be paused or terminated if the client becomes unresponsive, fails to provide critical
+            documentation,
+            or otherwise breaches terms of the agreement. In such cases, any unused service time may be forfeited unless
+            an
+            exception is granted at our discretion.</p>
+          <p>Our aim is to maintain a respectful, professional partnership at every stage of the engagement.</p>
+        </section>
+      </div>
+  </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="footer-container">
+      <h3 data-aos="fade-up">Contact Us</h3>
+      <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
+          data-aos="fade-up">info@globomerate.com</a></p>
+      <p data-aos="fade-up">
+        Globomerate, LLC<br>
+        Newark, DE, USA<br>
+        855-549-5040
+      </p>
+    </div>
+    <div class="footer-links" data-aos="fade-up">
+      <a href="terms.html" class="footer-button">Terms</a>
+      <a href="privacy.html" class="footer-button">Privacy</a>
+      <a href="refunds.html" class="footer-button">Refunds</a>
+    </div>
+
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>

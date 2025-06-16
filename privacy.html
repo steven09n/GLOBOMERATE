@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Engagement Terms | Globomerate, LLC</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      color: #004080;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 2rem !important;
+      background-color: #1e2a38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #f8f7f4;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Navegación */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-size: 1rem;
+      margin-bottom: 0 !important;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #f7f6f3;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      margin-top: 120px;
+      /* margin-bottom: 180px; */
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      max-width: 900px;
+    }
+
+    /* Contenedor general */
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .site-footer {
+      background-color: #1e2a38;
+      color: #e0e0e0;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 120px;
+    }
+
+    .site-footer h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .site-footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botón del menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1000px) and (orientation: landscape) {
+
+      /* Estilos para orientación horizontal */
+      .central {
+        margin-top: 5rem !important;
+      }
+
+    }
+
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-button {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .footer-button:hover {
+      background-color: #555;
+    }
+
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      /*se agrego z-index = 1 para superponer el navbar sobre el hero*/
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1e2a38;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .navbar {
+        align-items: flex-start;
+      }
+
+      .p1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .p2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        justify-content: center !important;
+      }
+
+      .p1 {
+        font-size: 12px !important;
+      }
+
+      .p2 {
+        font-size: 12px !important;
+      }
+
+      .logo {
+        font-size: 2.5rem !important;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar nav">
+      <h1 class="logo">GLOBOMERATE</h1>
+
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#retainer">Retainer</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <div class="content">
+        <header>
+          <h1>Global Privacy Practices</h1>
+          <p><strong>Globomerate, LLC</strong></p>
+        </header>
+
+        <section>
+          <p>At Globomerate, LLC, safeguarding client confidentiality is at the core of every service we offer. Serving
+            a diverse clientele across national and international borders, we adhere to rigorous privacy protocols that
+            comply with applicable regional and global data protection laws.</p>
+        </section>
+
+        <section>
+          <h2>Information We Collect</h2>
+          <p>As part of our client service process, we may collect the following categories of information:</p>
+          <ul>
+            <li>Business and personal contact details</li>
+            <li>Corporate documentation and regulatory submissions</li>
+            <li>Financial and operational records necessary for consulting services</li>
+            <li>Communications such as emails, meeting notes, and client directives</li>
+          </ul>
+          <p><strong>We do not collect or retain any payment card information.</strong> All financial transactions are
+            conducted through secure, third-party platforms that meet industry compliance standards.</p>
+        </section>
+
+        <section>
+          <h2>How We Use Client Information</h2>
+          <p>Information shared with us is used exclusively for:</p>
+          <ul>
+            <li>Fulfilling the scope of contracted services</li>
+            <li>Meeting legal and regulatory requirements</li>
+            <li>Maintaining accurate internal documentation</li>
+          </ul>
+          <p><strong>We do not rent, sell, or share client data</strong> with external parties for advertising,
+            promotional, or unrelated commercial purposes.</p>
+        </section>
+
+        <section>
+          <h2>Data Protection & Access Controls</h2>
+          <p>Globomerate implements strong administrative, technical, and physical safeguards to protect all client
+            data, including:</p>
+          <ul>
+            <li>Encrypted digital storage solutions (e.g., Google Workspace, Dropbox Business)</li>
+            <li>Role-based access permissions within our team</li>
+            <li>Monitoring and audit logs when necessary</li>
+          </ul>
+          <p><strong>Client data is never shared externally</strong> without explicit written authorization, unless
+            required by law or regulatory obligation.</p>
+        </section>
+
+        <section>
+          <h2>International Compliance & Sector-Specific Standards</h2>
+          <p>We comply with global data privacy laws and tailor our privacy practices to reflect:</p>
+          <ul>
+            <li>Confidentiality terms per client agreements</li>
+            <li>U.S. federal and state data regulations</li>
+            <li>European Union data protection standards (GDPR and related frameworks)</li>
+          </ul>
+          <p>For clients in regulated industries (e.g., finance, healthcare, education), we offer enhanced privacy
+            terms, including NDAs and contractual clauses, at onboarding or upon request.</p>
+          <p><strong>Clients must disclose any specific privacy or regulatory needs prior to project
+              initiation.</strong></p>
+        </section>
+
+        <section>
+          <h2>Data Retention & Deletion</h2>
+          <p>Client data is retained only for as long as is necessary to:</p>
+          <ul>
+            <li>Complete the service</li>
+            <li>Comply with legal and contractual obligations</li>
+            <li>Fulfill terms agreed upon with the client</li>
+          </ul>
+          <p>Upon project completion or contract termination, clients may request:</p>
+          <ul>
+            <li>Return of their data</li>
+            <li>Permanent deletion of stored records</li>
+            <li>Written confirmation of data handling actions</li>
+          </ul>
+          <p><strong>All such requests must be formally submitted in writing.</strong></p>
+        </section>
+      </div>
+  </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="footer-container">
+      <h3 data-aos="fade-up">Contact Us</h3>
+      <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
+          data-aos="fade-up">info@globomerate.com</a></p>
+      <p data-aos="fade-up">
+        Globomerate, LLC<br>
+        Newark, DE, USA<br>
+        855-549-5040
+      </p>
+    </div>
+    <div class="footer-links" data-aos="fade-up">
+      <a href="terms.html" class="footer-button">Terms</a>
+      <a href="privacy.html" class="footer-button">Privacy</a>
+      <a href="refunds.html" class="footer-button">Refunds</a>
+    </div>
+
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Engagement Terms | Globomerate, LLC</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1,
+    h2 {
+      color: #004080;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    strong {
+      color: #000;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 2rem !important;
+      background-color: #1e2a38;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #f8f7f4;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Navegación */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      font-size: 1rem;
+      margin-bottom: 0 !important;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #f7f6f3;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      margin-top: 120px;
+      /* margin-bottom: 180px; */
+      padding: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      max-width: 900px;
+    }
+
+    /* Contenedor general */
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .site-footer {
+      background-color: #1e2a38;
+      color: #e0e0e0;
+      padding: 60px 20px;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 120px;
+    }
+
+    .site-footer h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
+
+    .site-footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botón del menú móvil */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1000px) and (orientation: landscape) {
+
+      /* Estilos para orientación horizontal */
+      .central {
+        margin-top: 5rem !important;
+      }
+
+    }
+
+
+    .footer-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-button {
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .footer-button:hover {
+      background-color: #555;
+    }
+
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      /*se agrego z-index = 1 para superponer el navbar sobre el hero*/
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1e2a38;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+      }
+
+      .navbar {
+        align-items: flex-start;
+      }
+
+      .p1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+      .p2 {
+        position: relative;
+        top: auto;
+        right: auto;
+        font-size: 30px;
+        font-weight: bold;
+        margin: 5px;
+      }
+
+
+    }
+
+    @media (max-width: 480px) {
+      .nav {
+        justify-content: center !important;
+      }
+
+      .p1 {
+        font-size: 12px !important;
+      }
+
+      .p2 {
+        font-size: 12px !important;
+      }
+
+      .logo {
+        font-size: 2.5rem !important;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar nav">
+      <h1 class="logo">GLOBOMERATE</h1>
+
+      <!-- Botón de menú móvil -->
+      <button class="menu-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#market">Market</a></li>
+        <li><a href="index.html#retainer">Retainer</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <div class="content">
+        <header>
+          <h1>Refund Policy</h1>
+          <p><strong>Globomerate, LLC</strong></p>
+        </header>
+        <section>
+          <p>All services provided by Globomerate, LLC are rendered on a <strong>non-refundable basis</strong>. As a
+            professional service provider, our time, expertise, and availability are committed in advance upon
+            engagement. This policy ensures fairness to all clients and supports operational integrity.</p>
+        </section>
+        <section>
+          <h2>Finality of Payment</h2>
+          <p>All payments—whether for retainers, fixed-fee projects, or hourly consultations—are final once the
+            engagement begins. Refunds will not be granted in the following circumstances:</p>
+          <ul>
+            <li>Client changes mind or shifts project priorities</li>
+            <li>Delays or issues caused by the client (e.g., missing documents, non-responsiveness)</li>
+            <li>Cancellation of the project after work has started</li>
+            <li>Client does not utilize scheduled hours or sessions</li>
+          </ul>
+          <p><strong>Note:</strong> Each engagement reserves time and resources that cannot be reassigned once
+            committed.</p>
+        </section>
+        <section>
+          <h2>Cancellation Terms</h2>
+          <ul>
+            <li><strong>Hourly or Scheduled Sessions:</strong> Clients may reschedule with a minimum of 48 hours’
+              notice. Missed sessions or cancellations within 48 hours are deducted from total hours booked.</li>
+            <li><strong>Retainer or Fixed-Fee Packages:</strong> Once active, these are non-transferable and
+              time-sensitive. Any unused time will not be refunded, extended, or banked unless explicitly agreed in
+              writing prior to engagement.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Discretionary Adjustments</h2>
+          <p>In exceptional circumstances, and <strong>solely at our discretion</strong>, a credit toward future
+            services may be issued. This requires timely communication and documented justification.</p>
+          <p>All discretionary credits are reviewed case-by-case and must be formally requested in writing.</p>
+        </section>
+        <section>
+          <h2>Dispute Resolution</h2>
+          <p>Clients are encouraged to raise concerns as soon as they arise by email. We will make every effort to
+            resolve disputes professionally and fairly.</p>
+          <p>However, our no-refund policy remains applicable once service delivery has commenced. This clarity ensures
+            mutual understanding and accountability throughout the engagement.</p>
+        </section>
+      </div>
+  </div>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="footer-container">
+      <h3 data-aos="fade-up">Contact Us</h3>
+      <p data-aos="fade-up">You may also contact us at <a href="mailto:info@globomerate.com"
+          data-aos="fade-up">info@globomerate.com</a></p>
+      <p data-aos="fade-up">
+        Globomerate, LLC<br>
+        Newark, DE, USA<br>
+        855-549-5040
+      </p>
+    </div>
+    <div class="footer-links" data-aos="fade-up">
+      <a href="terms.html" class="footer-button">Terms</a>
+      <a href="privacy.html" class="footer-button">Privacy</a>
+      <a href="refunds.html" class="footer-button">Refunds</a>
+    </div>
+
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    });
+  </script>
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+
+</html>
