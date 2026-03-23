@@ -1,173 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ventora Services - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Firma | Abogados Corporativos</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Configuración de Tailwind inspirada en firmas corporativas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            // Azul marino oscuro corporativo
+                            900: '#0B1B3D',
+                            800: '#152A55',
+                            // Cian/Azul claro para acentos (estilo BLP)
+                            accent: '#00A4E0',
+                            accentHover: '#008CBE',
+                            // Grises
+                            light: '#F4F7F9',
+                            gray: '#64748B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Estilos personalizados puros (CSS) */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        .hero-bg {
+            /* Imagen de oficina moderna con superposición oscura */
+            background-image: linear-gradient(to right, rgba(11, 27, 61, 0.9) 0%, rgba(11, 27, 61, 0.6) 100%), 
+                              url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        /* Transición para el navbar al hacer scroll */
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            color: #0B1B3D !important;
+        }
+        
+        .navbar-scrolled .nav-link {
+            color: #0B1B3D;
+        }
+        
+        .navbar-scrolled .logo-text {
+            color: #0B1B3D;
+        }
 
+        .navbar-scrolled .menu-icon {
+            color: #0B1B3D;
+        }
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+        /* Efecto de línea debajo de los enlaces */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #00A4E0;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        /* Animación suave de aparición */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
+<body class="bg-white text-brand-900">
 
-<body>
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 z-50">
+                    <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">L</span>
+                    </div>
+                    <span id="logo-text" class="logo-text font-bold text-xl tracking-wide uppercase transition-colors duration-300">LexCorp</span>
+                </a>
 
-  <header>
-    <div class="container">
-      <div class="logo">
-        <h1>VENTORA SERVICES</h1>
-        <p>Administrative services for your needs</p>
-      </div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="what-we-do.html">What We Do</a>
-        <a href="getintouch.html">Get in Touch</a>
-        <a href="Policies.html">Terms & Policies</a>
-      </nav>
-    </div>
-  </header>
+                <!-- Enlaces Desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-300">LA FIRMA</a>
+                    <a href="#" class="nav-link text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-300">ÁREAS DE PRÁCTICA</a>
+                    <a href="#" class="nav-link text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-300">EQUIPO</a>
+                    <a href="#" class="nav-link text-sm font-medium tracking-wide hover:text-brand-accent transition-colors duration-300">SOSTENIBILIDAD</a>
+                    <a href="#" class="border border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-white px-5 py-2 text-sm font-medium transition-all duration-300">
+                        CONTACTO
+                    </a>
+                </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-image-container">
-      <img src="12.jpg" alt="Virtual assistant managing digital interfaces and data" class="hero-background">
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <h2>Your Virtual Office Solution</h2>
-          <p>Professional administrative support tailored to your business needs</p>
-          <a href="getintouch.html" class="btn">Get Started Today</a>
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center z-50">
+                    <button id="mobile-menu-button" class="focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="menu-icon w-8 h-8 transition-colors duration-300"></i>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Sección de título centrado -->
-  <section class="container_section_title">
-    <h2 class="text-center-index mb-4 custom-title">Office Support That Adapts to You</h2>
-  </section>
-
-  <!-- Sección de cuadros -->
-  <section class="container_section" style="display: flex; justify-content: center;">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-5" data-aos="zoom-in"
-      data-aos-duration="1000">
-      <div class="col" style="display: flex; justify-content: end;">
-        <div class="card h-100 card_index">
-          <div class="icon" style=" display: flex; justify-content: center;">
-            <i class="fas fa-user-clock fa-2x "></i>
-          </div>
-          <div class="card-body" style="text-align: center;">
-            <h5 class="card-title-index">We support your office operations and virtual assistant needs with flexible, tailored solutions.</h5>
-            <p>Whether you need help running your day-to-day office functions or require a reliable virtual assistant, our services are customized to fit your exact requirements.
-          </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-900 z-40 hidden flex-col justify-center items-center text-white">
+            <div class="flex flex-col space-y-6 text-center text-xl font-light tracking-wide">
+                <a href="#" class="hover:text-brand-accent transition-colors">LA FIRMA</a>
+                <a href="#" class="hover:text-brand-accent transition-colors">ÁREAS DE PRÁCTICA</a>
+                <a href="#" class="hover:text-brand-accent transition-colors">EQUIPO</a>
+                <a href="#" class="hover:text-brand-accent transition-colors">SOSTENIBILIDAD</a>
+                <a href="#" class="text-brand-accent font-medium mt-4">CONTACTO</a>
+            </div>
         </div>
-      </div>
-      <div class="col" style=" display: flex; justify-content: start;">
-        <div class="card h-100 card_index">
-          <div class="icon" style=" display: flex; justify-content: center;">
-            <i class="fas fa-chart-line fa-2x"></i>
-          </div>
-          <div class="card-body" style="text-align: center;">
-            <h5 class="card-title-index">What sets us apart is our focus and quality.</h5>
-            <p class="">We take pride in the precision and care we bring to clerical tasks, office coordination, and administrative management. Let us show you how we can improve your operational efficiency.</p>
-          </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="relative h-[70vh] min-h-[500px] flex items-center hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 pt-20">
+            <div class="max-w-3xl fade-in-up visible">
+                <h2 class="text-brand-accent font-medium tracking-[0.2em] mb-4 text-sm md:text-base uppercase">Nuestra Esencia</h2>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Innovación y excelencia en servicios legales.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 font-light max-w-2xl">
+                    Somos el aliado estratégico para el éxito de sus negocios en la región.
+                </p>
+            </div>
         </div>
-      </div>
-      <div class="col" style=" display: flex; justify-content: end;">
-        <div class="card h-100 card_index">
-          <div class="icon" style=" display: flex; justify-content: center ;">
-            <i class="fas fa-network-wired fa-2x"></i>
-          </div>
-          <div class="card-body" style="text-align: center;">
-            <h5 class="card-title-index">We work as your remote employee or department.</h5>
-            <p>Engage us on an hourly or contract basis and benefit from reduced overhead, payroll savings, and fewer operational headaches without losing the human touch
-          </div>
+    </header>
+
+    <!-- Sección Quiénes Somos -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                
+                <!-- Título Lateral -->
+                <div class="lg:col-span-4 fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-900">La Firma</h2>
+                    <div class="w-12 h-1 bg-brand-accent mt-6"></div>
+                </div>
+                
+                <!-- Contenido Principal -->
+                <div class="lg:col-span-8 fade-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-light text-brand-900 leading-relaxed mb-8">
+                        Redefinimos la práctica legal mediante un enfoque innovador, integral y estrictamente orientado a los negocios de nuestros clientes.
+                    </h3>
+                    
+                    <div class="space-y-6 text-brand-gray text-lg font-light leading-relaxed">
+                        <p>
+                            Desde nuestra fundación, hemos creído que el derecho no debe ser un obstáculo, sino una herramienta para hacer que los negocios sucedan. Nuestra firma se ha posicionado como líder regional combinando talento excepcional, tecnología de punta y un profundo conocimiento de las industrias en las que operan nuestros clientes.
+                        </p>
+                        <p>
+                            No solo resolvemos problemas legales; anticipamos riesgos y estructuramos soluciones creativas que agregan valor real a las corporaciones, instituciones financieras y empresas multinacionales que confían en nosotros.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-gray-200 pt-12">
+                        <div>
+                            <span class="block text-4xl font-bold text-brand-900 mb-2">+20</span>
+                            <span class="text-sm font-medium text-brand-gray uppercase tracking-wider">Años de Trayectoria</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold text-brand-900 mb-2">+150</span>
+                            <span class="text-sm font-medium text-brand-gray uppercase tracking-wider">Profesionales</span>
+                        </div>
+                        <div>
+                            <span class="block text-4xl font-bold text-brand-900 mb-2">6</span>
+                            <span class="text-sm font-medium text-brand-gray uppercase tracking-wider">Oficinas en la región</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col" style=" display: flex; justify-content: start;">
-        <div class="card h-100 card_index">
-          <div class="icon" style=" display: flex; justify-content: center;">
-            <i class="fas fa-dollar-sign fa-2x"></i>
-          </div>
-          <div class="card-body" style="text-align: center;">
-            <h5 class="card-title-index">Our pricing is volume-based and flexible.</h5>
-            <p>The more consistent your needs, the more competitive your rate. Fees are negotiable and established on a case-by-case basis based on scope and frequency.</p>
-          </div>
+    </section>
+
+    <!-- Sección Imagen Intermedia (Estilo Corporativo) -->
+    <section class="h-[60vh] relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=2000" alt="Equipo legal trabajando" class="w-full h-full object-cover object-center grayscale opacity-80" />
+        <div class="absolute inset-0 bg-brand-900/40 mix-blend-multiply"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white text-center max-w-4xl px-4 leading-tight fade-in-up">
+                Comprometidos con el más alto estándar ético y profesional.
+            </h2>
         </div>
-      </div>
+    </section>
 
-    </div>
-    </div>
+    <!-- Sección Nuestros Pilares -->
+    <section class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-bold text-brand-900 mb-4">Nuestros Pilares</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto font-light">Los principios fundamentales que guían nuestro trabajo diario y nuestra relación con los clientes.</p>
+            </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pilar 1 -->
+                <div class="bg-white p-8 border-t-4 border-brand-accent shadow-sm hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.1s;">
+                    <i data-lucide="globe" class="w-10 h-10 text-brand-accent mb-6"></i>
+                    <h3 class="text-xl font-bold text-brand-900 mb-3">Visión Global</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Entendemos el entorno internacional y aplicamos las mejores prácticas globales adaptadas al mercado local.
+                    </p>
+                </div>
 
+                <!-- Pilar 2 -->
+                <div class="bg-white p-8 border-t-4 border-brand-800 shadow-sm hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.2s;">
+                    <i data-lucide="zap" class="w-10 h-10 text-brand-800 mb-6"></i>
+                    <h3 class="text-xl font-bold text-brand-900 mb-3">Agilidad</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Respuestas rápidas y oportunas. El mundo de los negocios no se detiene y nosotros tampoco.
+                    </p>
+                </div>
 
+                <!-- Pilar 3 -->
+                <div class="bg-white p-8 border-t-4 border-brand-accent shadow-sm hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.3s;">
+                    <i data-lucide="leaf" class="w-10 h-10 text-brand-accent mb-6"></i>
+                    <h3 class="text-xl font-bold text-brand-900 mb-3">Sostenibilidad</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Fomentamos prácticas ASG (Ambientales, Sociales y de Gobernanza) tanto en nuestra firma como con nuestros clientes.
+                    </p>
+                </div>
 
-    <!-- 
-
-    <div class="row gx-5 gy-5 justify-content-center">
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="custom-box">
-          <i class="fas fa-user-clock fa-2x icon"></i>
-          <h5 class="custom-text">Virtual Assistance</h5>
-          <p class="custom-text">We help run your office or act as your virtual assistant based on your specific needs.
-          </p>
+                <!-- Pilar 4 -->
+                <div class="bg-white p-8 border-t-4 border-brand-800 shadow-sm hover:shadow-md transition-shadow fade-in-up" style="transition-delay: 0.4s;">
+                    <i data-lucide="users" class="w-10 h-10 text-brand-800 mb-6"></i>
+                    <h3 class="text-xl font-bold text-brand-900 mb-3">Inclusión</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Creemos que los equipos diversos generan soluciones más innovadoras y completas para casos complejos.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="custom-box">
-          <i class="fas fa-chart-line fa-2x icon"></i>
-          <h5 class="custom-text">Efficiency & Quality</h5>
-          <p class="custom-text">Our work quality stands out. Improve your clerical and office tasks with us.</p>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="custom-box">
-          <i class="fas fa-network-wired fa-2x icon"></i>
-          <h5 class="custom-text">Remote Team</h5>
-          <p class="custom-text">We act as your remote staff with fixed rates, saving on payroll and operations costs.
-          </p>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3">
-        <div class="custom-box">
-          <i class="fas fa-dollar-sign fa-2x icon"></i>
-          <h5 class="custom-text">Flexible Pricing</h5>
-          <p class="custom-text">Our fees adapt to your workload — regular work means lower costs. Negotiable rates.</p>
-        </div>
-      </div>
-    </div> -->
-  </section>
+    </section>
 
-  <footer>
-    <p class="text-center py-3">&copy; 2025 Ventora Services. All rights reserved.</p>
-  </footer>
+    <!-- Call to action -->
+    <section class="py-20 bg-brand-900 text-white border-b-8 border-brand-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <h2 class="text-3xl font-light mb-8">¿Listo para hacer que los negocios sucedan?</h2>
+            <a href="#" class="inline-block bg-brand-accent hover:bg-brand-accentHover text-white font-medium px-8 py-4 uppercase tracking-wider text-sm transition-colors duration-300">
+                Contacte a un Abogado
+            </a>
+        </div>
+    </section>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav").classList.toggle("active");
-    }
-  </script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- Footer Corporativo -->
+    <footer class="bg-[#050B14] text-gray-400 py-16 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-gray-800 pb-12">
+                
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-accent rounded-sm flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">L</span>
+                        </div>
+                        <span class="font-bold text-xl tracking-wide uppercase text-white">LexCorp</span>
+                    </div>
+                    <p class="font-light leading-relaxed">
+                        Firma legal líder en la región, reconocida por su excelencia, innovación y enfoque en negocios corporativos.
+                    </p>
+                </div>
 
+                <div>
+                    <h4 class="text-white font-semibold mb-6 tracking-wider uppercase text-xs">La Firma</h4>
+                    <ul class="space-y-3 font-light">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Quiénes Somos</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Reconocimientos</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Sostenibilidad</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Pro Bono</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Carreras</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-6 tracking-wider uppercase text-xs">Servicios</h4>
+                    <ul class="space-y-3 font-light">
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Derecho Corporativo</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Banca y Finanzas</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Bienes Raíces</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Resolución de Conflictos</a></li>
+                        <li><a href="#" class="hover:text-brand-accent transition-colors">Laboral e Inmigración</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-6 tracking-wider uppercase text-xs">Contacto</h4>
+                    <ul class="space-y-3 font-light">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-1 text-brand-accent flex-shrink-0"></i>
+                            <span>managua nicaragua</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-accent flex-shrink-0"></i>
+                            <span>+(505)5548224</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-brand-accent flex-shrink-0"></i>
+                            <span>info@lexcorp-law.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center font-light text-xs">
+                <p>&copy; <span id="year"></span> LexCorp Legal. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Uso</a>
+                    <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Vanilla Puro -->
+    <script>
+        // 1. Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // 2. Establecer año actual en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 3. Efecto del Navbar al hacer Scroll
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Scrolled state
+                navbar.classList.add('navbar-scrolled');
+                navbar.classList.remove('text-white');
+                navbar.classList.add('text-brand-900');
+            } else {
+                // Top state
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.remove('text-brand-900');
+                navbar.classList.add('text-white');
+            }
+        });
+
+        // 4. Funcionalidad del Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                // Cambiar icono a 'X' (usando lógica simple para simular)
+                menuIcon.innerHTML = `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`;
+                navbar.classList.remove('navbar-scrolled');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                // Restaurar icono de menú
+                menuIcon.innerHTML = `<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>`;
+                
+                // Si cerramos el menú y estamos scrolleados, devolver el estilo
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                }
+            }
+        });
+
+        // 5. Animación de elementos al hacer scroll (Fade in up)
+        const fadeElements = document.querySelectorAll('.fade-in-up');
+        
+        const checkVisibility = () => {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        // Escuchar scroll para animaciones
+        window.addEventListener('scroll', checkVisibility);
+        // Ejecutar una vez al cargar
+        checkVisibility();
+
+    </script>
 </body>
-
 </html>
