@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctenos – Nicaragua Counsel Partner</title>
+    <meta name="description" content="Ponte en contacto con NCP Nicaragua Counsel Partner. Estamos listos para atender tu consulta legal de forma rápida y profesional.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+    /* =========================================================
+       CONTACTO.HTML — DISEÑO PREMIUM COMPLETO
+       ========================================================= */
+
+    /* ── RESET LOCAL ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── HERO FULL-SCREEN ── */
+    .ch-hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: #060911;
+        padding: 120px 24px 80px;
+        text-align: center;
+    }
+
+    /* Malla de puntos de fondo */
+    .ch-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+            radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
+    }
+
+    /* Glow borgoña izquierda */
+    .ch-hero .glow-left {
+        position: absolute;
+        left: -200px;
+        top: 10%;
+        width: 700px;
+        height: 700px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(92,6,28,0.55) 0%, transparent 70%);
+        pointer-events: none;
+        animation: glowPulse 6s ease-in-out infinite;
+    }
+
+    /* Glow derecha */
+    .ch-hero .glow-right {
+        position: absolute;
+        right: -150px;
+        bottom: 5%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(92,6,28,0.35) 0%, transparent 70%);
+        pointer-events: none;
+        animation: glowPulse 8s ease-in-out infinite reverse;
+    }
+
+    @keyframes glowPulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50%       { transform: scale(1.1); opacity: 0.75; }
+    }
+
+    /* Línea diagonal decorativa */
+    .ch-hero .diagonal-line {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    .ch-hero .diagonal-line::after {
+        content: '';
+        position: absolute;
+        top: -40%;
+        left: 40%;
+        width: 1px;
+        height: 200%;
+        background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.05) 40%, rgba(255,255,255,0.05) 60%, transparent);
+        transform: rotate(25deg);
+    }
+
+    .ch-hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 760px;
+    }
+
+    .ch-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(92,6,28,0.25);
+        border: 1px solid rgba(92,6,28,0.5);
+        border-radius: 50px;
+        padding: 0.4rem 1.2rem;
+        margin-bottom: 2.2rem;
+        animation: fadeSlideDown 0.8s ease forwards;
+    }
+
+    .ch-badge-dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: #e05a7a;
+        animation: blink 1.8s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+        0%,100% { opacity: 1; }
+        50%      { opacity: 0.3; }
+    }
+
+    .ch-badge span {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #e8a0af;
+    }
+
+    .ch-hero h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(2.6rem, 6vw, 4.4rem);
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.1;
+        margin-bottom: 1.6rem;
+        animation: fadeSlideUp 0.9s ease 0.1s both;
+    }
+
+    .ch-hero h1 .accent-word {
+        background: linear-gradient(135deg, #e05a7a, #5C061C);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .ch-hero p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255,255,255,0.55);
+        line-height: 1.8;
+        margin-bottom: 3rem;
+        animation: fadeSlideUp 0.9s ease 0.2s both;
+    }
+
+    /* Stats row */
+    .ch-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        animation: fadeSlideUp 0.9s ease 0.3s both;
+    }
+
+    .ch-stat {
+        text-align: center;
+    }
+
+    .ch-stat-num {
+        font-family: 'Outfit', sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 0.3rem;
+    }
+
+    .ch-stat-num span {
+        color: #e05a7a;
+    }
+
+    .ch-stat-label {
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: rgba(255,255,255,0.4);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .ch-stat-sep {
+        width: 1px;
+        background: rgba(255,255,255,0.1);
+        align-self: stretch;
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        animation: fadeIn 1.2s ease 0.8s both;
+    }
+
+    .scroll-hint span {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+    }
+
+    .scroll-hint-arrow {
+        width: 28px;
+        height: 28px;
+        border: 1.5px solid rgba(255,255,255,0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounceDown 2s ease-in-out infinite;
+    }
+
+    .scroll-hint-arrow svg {
+        width: 12px; height: 12px;
+        stroke: rgba(255,255,255,0.4);
+    }
+
+    @keyframes bounceDown {
+        0%,100% { transform: translateY(0); }
+        50%      { transform: translateY(6px); }
+    }
+
+    /* ── SECCIÓN PRINCIPAL ── */
+    .ch-main {
+        background: #f8fafc;
+        padding: 100px 0 0;
+    }
+
+    .ch-main .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .ch-layout {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 3.5rem;
+        align-items: start;
+    }
+
+    /* ── PANEL IZQUIERDO (OSCURO) ── */
+    .ch-panel {
+        background: linear-gradient(160deg, #0d1120 0%, #1a0810 60%, #5C061C 100%);
+        border-radius: 28px;
+        padding: 3rem 2.6rem;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        box-shadow: 0 40px 80px -20px rgba(92,6,28,0.4);
+    }
+
+    .ch-panel::before {
+        content: '';
+        position: absolute;
+        top: -80px; right: -80px;
+        width: 280px; height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(92,6,28,0.6), transparent 70%);
+        pointer-events: none;
+    }
+
+    .ch-panel::after {
+        content: '';
+        position: absolute;
+        bottom: -60px; left: -60px;
+        width: 220px; height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.03), transparent 70%);
+        pointer-events: none;
+    }
+
+    .ch-panel-tag {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.45);
+        margin-bottom: 1rem;
+    }
+
+    .ch-panel h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.85rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+        color: #fff;
+    }
+
+    .ch-panel > p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.55);
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Info cards dentro del panel */
+    .ch-info-card {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 1.2rem 1.3rem;
+        margin-bottom: 1rem;
+        transition: background 0.3s, border-color 0.3s;
+        cursor: default;
+    }
+
+    .ch-info-card:hover {
+        background: rgba(255,255,255,0.09);
+        border-color: rgba(92,6,28,0.5);
+    }
+
+    .ch-info-card-icon {
+        width: 42px; height: 42px;
+        border-radius: 12px;
+        background: rgba(92,6,28,0.35);
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .ch-info-card-icon svg {
+        width: 20px; height: 20px;
+        stroke: #e8a0af;
+    }
+
+    .ch-info-card-body h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.4);
+        margin-bottom: 0.25rem;
+    }
+
+    .ch-info-card-body p,
+    .ch-info-card-body a {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        color: rgba(255,255,255,0.85);
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 1.5;
+        transition: color 0.25s;
+    }
+
+    .ch-info-card-body a:hover { color: #e8a0af; }
+
+    /* Divisor */
+    .ch-divider {
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        margin: 2rem 0;
+    }
+
+    /* Redes sociales */
+    .ch-social-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.35);
+        margin-bottom: 1rem;
+    }
+
+    .ch-social-row {
+        display: flex;
+        gap: 0.7rem;
+    }
+
+    .ch-social-btn {
+        width: 40px; height: 40px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.04);
+        display: flex; align-items: center; justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .ch-social-btn svg {
+        width: 17px; height: 17px;
+        stroke: rgba(255,255,255,0.5);
+        transition: stroke 0.3s;
+    }
+
+    .ch-social-btn:hover {
+        background: rgba(92,6,28,0.5);
+        border-color: rgba(92,6,28,0.6);
+    }
+
+    .ch-social-btn:hover svg { stroke: #fff; }
+
+    /* Horario barra */
+    .ch-hours {
+        margin-top: 1.5rem;
+        background: rgba(255,255,255,0.04);
+        border-radius: 14px;
+        padding: 1.2rem 1.3rem;
+        border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .ch-hours-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .ch-hours-dot {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        animation: blink 2s ease-in-out infinite;
+    }
+
+    .ch-hours-header span {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.5);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .ch-hours-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.82rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .ch-hours-row .day { color: rgba(255,255,255,0.5); }
+    .ch-hours-row .time { color: rgba(255,255,255,0.85); font-weight: 500; }
+
+    /* ── PANEL DERECHO (FORMULARIO) ── */
+    .ch-form-panel {
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 3rem 3.2rem 3.2rem;
+        box-shadow: 0 20px 60px -15px rgba(9,13,26,0.08);
+        border: 1px solid rgba(15,23,42,0.06);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ch-form-panel::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0;
+        width: 200px; height: 200px;
+        background: radial-gradient(circle at top right, rgba(92,6,28,0.04), transparent 70%);
+        pointer-events: none;
+    }
+
+    .ch-form-header {
+        margin-bottom: 2.5rem;
+        position: relative;
+    }
+
+    .ch-form-header h3 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #090D1A;
+        margin-bottom: 0.5rem;
+    }
+
+    .ch-form-header p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        color: #64748B;
+        line-height: 1.6;
+    }
+
+    /* Tabs de tipo consulta */
+    .ch-tabs {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+        background: #f1f5f9;
+        border-radius: 14px;
+        padding: 5px;
+    }
+
+    .ch-tab {
+        flex: 1;
+        padding: 0.6rem 0.5rem;
+        border: none;
+        background: transparent;
+        border-radius: 10px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #64748B;
+        cursor: pointer;
+        transition: all 0.3s;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    .ch-tab.active {
+        background: #ffffff;
+        color: #5C061C;
+        box-shadow: 0 2px 12px rgba(9,13,26,0.08);
+    }
+
+    /* Campos del formulario */
+    .cf-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .cf-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+    }
+
+    .cf-group.no-mb { margin-bottom: 0; }
+
+    .cf-group label {
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: #64748B;
+        margin-bottom: 0.55rem;
+    }
+
+    .cf-group input,
+    .cf-group textarea,
+    .cf-group select {
+        width: 100%;
+        padding: 0.85rem 1.1rem;
+        border: 1.5px solid #E2E8F0;
+        border-radius: 12px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.93rem;
+        color: #090D1A;
+        background: #FAFBFD;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .cf-group input::placeholder,
+    .cf-group textarea::placeholder { color: #94A3B8; }
+
+    .cf-group input:focus,
+    .cf-group textarea:focus,
+    .cf-group select:focus {
+        border-color: #5C061C;
+        box-shadow: 0 0 0 4px rgba(92,6,28,0.07);
+        background: #fff;
+    }
+
+    .cf-group textarea {
+        resize: vertical;
+        min-height: 120px;
+        line-height: 1.6;
+    }
+
+    .cf-group select {
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2394A3B8' stroke-width='2.5' viewBox='0 0 24 24'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.8rem;
+    }
+
+    /* Input con icono */
+    .cf-input-wrap {
+        position: relative;
+    }
+
+    .cf-input-wrap svg {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px; height: 16px;
+        stroke: #94A3B8;
+        pointer-events: none;
+        transition: stroke 0.3s;
+    }
+
+    .cf-input-wrap input {
+        padding-left: 2.8rem;
+    }
+
+    .cf-input-wrap:focus-within svg { stroke: #5C061C; }
+
+    /* Urgencia toggle */
+    .cf-urgency {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.2rem;
+        padding: 0.9rem 1.1rem;
+        border-radius: 12px;
+        border: 1.5px solid #E2E8F0;
+        background: #FAFBFD;
+        cursor: pointer;
+        transition: border-color 0.3s;
+    }
+
+    .cf-urgency:hover { border-color: #5C061C; }
+
+    .cf-toggle {
+        width: 38px; height: 22px;
+        border-radius: 11px;
+        background: #E2E8F0;
+        position: relative;
+        flex-shrink: 0;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+
+    .cf-toggle::after {
+        content: '';
+        position: absolute;
+        top: 3px; left: 3px;
+        width: 16px; height: 16px;
+        border-radius: 50%;
+        background: #fff;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+
+    .cf-toggle.on {
+        background: #5C061C;
+    }
+
+    .cf-toggle.on::after {
+        transform: translateX(16px);
+    }
+
+    .cf-urgency-text {
+        flex: 1;
+    }
+
+    .cf-urgency-text strong {
+        display: block;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #090D1A;
+    }
+
+    .cf-urgency-text span {
+        font-size: 0.78rem;
+        color: #64748B;
+    }
+
+    /* Checkbox elegante */
+    .cf-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .cf-check-box {
+        width: 20px; height: 20px;
+        border-radius: 6px;
+        border: 1.5px solid #CBD5E1;
+        flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer;
+        transition: all 0.25s;
+        margin-top: 1px;
+        background: #FAFBFD;
+    }
+
+    .cf-check-box svg {
+        width: 12px; height: 12px;
+        stroke: #fff;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .cf-check-box.checked {
+        background: #5C061C;
+        border-color: #5C061C;
+    }
+
+    .cf-check-box.checked svg { opacity: 1; }
+
+    .cf-check-label {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.83rem;
+        color: #64748B;
+        line-height: 1.6;
+        cursor: pointer;
+    }
+
+    .cf-check-label a { color: #5C061C; text-decoration: none; font-weight: 600; }
+
+    /* Botón enviar */
+    .cf-submit {
+        width: 100%;
+        padding: 1.05rem 2rem;
+        background: linear-gradient(135deg, #5C061C 0%, #8a0a28 100%);
+        color: #fff;
+        border: none;
+        border-radius: 14px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 8px 28px rgba(92,6,28,0.35);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cf-submit::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .cf-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(92,6,28,0.45); }
+    .cf-submit:hover::before { opacity: 1; }
+    .cf-submit:active { transform: translateY(0); }
+
+    .cf-submit svg { width: 20px; height: 20px; transition: transform 0.3s; }
+    .cf-submit:hover svg { transform: translateX(4px); }
+
+    /* Mensaje de éxito */
+    .cf-success {
+        display: none;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    .cf-success-ring {
+        width: 80px; height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #5C061C22, #5C061C11);
+        border: 2px solid rgba(92,6,28,0.2);
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 2rem;
+        animation: successPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards;
+    }
+
+    .cf-success-ring svg {
+        width: 36px; height: 36px;
+        stroke: #5C061C;
+    }
+
+    @keyframes successPop {
+        from { transform: scale(0.5); opacity: 0; }
+        to   { transform: scale(1); opacity: 1; }
+    }
+
+    .cf-success h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #090D1A;
+        margin-bottom: 0.6rem;
+    }
+
+    .cf-success p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.93rem;
+        color: #64748B;
+        line-height: 1.7;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* ── FRANJA DE GARANTÍAS ── */
+    .ch-guarantees {
+        background: #090D1A;
+        padding: 70px 0;
+    }
+
+    .ch-guarantees .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .ch-g-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .ch-g-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem 1.6rem;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.06);
+        transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    .ch-g-card:hover {
+        background: rgba(255,255,255,0.07);
+        border-color: rgba(92,6,28,0.4);
+        transform: translateY(-4px);
+    }
+
+    .ch-g-icon {
+        width: 48px; height: 48px;
+        border-radius: 14px;
+        background: rgba(92,6,28,0.3);
+        display: flex; align-items: center; justify-content: center;
+    }
+
+    .ch-g-icon svg {
+        width: 22px; height: 22px;
+        stroke: #e8a0af;
+    }
+
+    .ch-g-card h5 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.3rem;
+    }
+
+    .ch-g-card p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.83rem;
+        color: rgba(255,255,255,0.45);
+        line-height: 1.65;
+    }
+
+    /* ── SECCIÓN CTA FINAL ── */
+    .ch-cta {
+        background: linear-gradient(135deg, #5C061C 0%, #3a0412 100%);
+        padding: 90px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ch-cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 35px 35px;
+    }
+
+    .ch-cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; padding: 0 2rem; }
+
+    .ch-cta h2 {
+        font-family: 'Outfit', sans-serif;
+        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .ch-cta p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: rgba(255,255,255,0.65);
+        margin-bottom: 2.5rem;
+        line-height: 1.7;
+    }
+
+    .ch-cta-btns {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .ch-cta-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 2rem;
+        background: #fff;
+        color: #5C061C;
+        border-radius: 50px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+
+    .ch-cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,0,0,0.3); }
+
+    .ch-cta-btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.9rem 2rem;
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+        border: 1.5px solid rgba(255,255,255,0.25);
+        border-radius: 50px;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.3s, border-color 0.3s;
+    }
+
+    .ch-cta-btn-secondary:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.5); }
+
+    /* ── ANIMACIONES DE ENTRADA ── */
+    @keyframes fadeSlideDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+        .ch-layout { grid-template-columns: 1fr; }
+        .ch-panel { max-width: 100%; }
+        .ch-g-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+        .cf-grid-2 { grid-template-columns: 1fr; }
+        .ch-stats { gap: 1.5rem; }
+        .ch-stat-sep { display: none; }
+        .ch-g-grid { grid-template-columns: 1fr; }
+        .ch-form-panel { padding: 2rem 1.5rem; }
+        .ch-panel { padding: 2rem 1.6rem; }
+        .ch-tabs { flex-wrap: wrap; }
+        .ch-cta-btns { flex-direction: column; align-items: center; }
+    }
+    </style>
+</head>
+<body>
+
+<!-- DECORACIONES DE FONDO -->
+<div class="bg-decorations">
+    <div class="bg-circle-1"></div>
+    <div class="bg-circle-2"></div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo-link">
+            <img src="LOGO/LOGO-RECORTADO-NEGRO.png" alt="NCP Nicaragua Counsel Partner" class="logo">
+        </a>
+        <nav class="nav">
+            <a href="index.html#adn">Nuestro ADN</a>
+            <a href="index.html#valores">Cultura</a>
+            <a href="index.html#sostenibilidad">Sostenibilidad</a>
+            <a href="index.html#miembro" class="nav-miembro">Miembro</a>
+            <a href="contacto.html" class="nav-contacto" aria-current="page">Contáctenos</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     HERO FULL-SCREEN
+══════════════════════════════════════ -->
+<section class="ch-hero">
+    <div class="glow-left"></div>
+    <div class="glow-right"></div>
+    <div class="diagonal-line"></div>
+
+    <div class="ch-hero-inner">
+        <div class="ch-badge">
+            <span class="ch-badge-dot"></span>
+            <span>Atención personalizada · 20+ años de experiencia</span>
+        </div>
+
+        <h1>
+            Hablemos de tu<br>
+            <span class="accent-word">próximo reto legal</span>
+        </h1>
+
+        <p>
+            Cuéntanos sobre tu caso o proyecto. Nuestro equipo de especialistas<br>
+            te contactará en menos de 24 horas hábiles.
+        </p>
+
+        <div class="ch-stats">
+            <div class="ch-stat">
+                <div class="ch-stat-num">20<span>+</span></div>
+                <div class="ch-stat-label">Años de experiencia</div>
+            </div>
+            <div class="ch-stat-sep"></div>
+            <div class="ch-stat">
+                <div class="ch-stat-num">500<span>+</span></div>
+                <div class="ch-stat-label">Clientes atendidos</div>
+            </div>
+            <div class="ch-stat-sep"></div>
+            <div class="ch-stat">
+                <div class="ch-stat-num">24<span>h</span></div>
+                <div class="ch-stat-label">Tiempo de respuesta</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-hint">
+        <span>Escríbenos</span>
+        <div class="scroll-hint-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECCIÓN PRINCIPAL
+══════════════════════════════════════ -->
+<section class="ch-main">
+    <div class="container">
+        <div class="ch-layout">
+
+            <!-- ── PANEL INFO OSCURO ── -->
+            <div class="ch-panel reveal">
+                <p class="ch-panel-tag">Información de contacto</p>
+                <h2>Estamos aquí para ayudarte</h2>
+                <p>En NCP combinamos décadas de experiencia con agilidad y enfoque estratégico. Contáctanos por cualquiera de estos canales.</p>
+
+                <div class="ch-info-card">
+                    <div class="ch-info-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="ch-info-card-body">
+                        <h4>Oficina Principal</h4>
+                        <p>Managua, Nicaragua<br>Centro Corporativo Premium</p>
+                    </div>
+                </div>
+
+                <div class="ch-info-card">
+                    <div class="ch-info-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.3a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16"/>
+                        </svg>
+                    </div>
+                    <div class="ch-info-card-body">
+                        <h4>Teléfono</h4>
+                        <a href="tel:+50500000000">+505 0000-0000</a>
+                    </div>
+                </div>
+
+                <div class="ch-info-card">
+                    <div class="ch-info-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <div class="ch-info-card-body">
+                        <h4>Correo Electrónico</h4>
+                        <a href="mailto:info@ncp.com.ni">info@ncp.com.ni</a>
+                    </div>
+                </div>
+
+                <div class="ch-divider"></div>
+
+                <!-- Horario -->
+                <div class="ch-hours">
+                    <div class="ch-hours-header">
+                        <div class="ch-hours-dot"></div>
+                        <span>Horario de Atención</span>
+                    </div>
+                    <div class="ch-hours-row">
+                        <span class="day">Lunes – Viernes</span>
+                        <span class="time">8:00 am – 6:00 pm</span>
+                    </div>
+                    <div class="ch-hours-row">
+                        <span class="day">Sábado</span>
+                        <span class="time">9:00 am – 12:00 pm</span>
+                    </div>
+                    <div class="ch-hours-row">
+                        <span class="day">Domingo</span>
+                        <span class="time" style="color:rgba(255,255,255,0.35)">Cerrado</span>
+                    </div>
+                </div>
+
+                <div class="ch-divider"></div>
+
+                <p class="ch-social-title">Síguenos</p>
+                <div class="ch-social-row">
+                    <a href="#" class="ch-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="ch-social-btn" title="Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="ch-social-btn" title="Instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="ch-social-btn" title="WhatsApp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── FORMULARIO ── -->
+            <div class="ch-form-panel reveal reveal-delay-1">
+                <div class="ch-form-header">
+                    <h3>Envíanos tu consulta</h3>
+                    <p>Completa los datos y nuestro equipo se pondrá en contacto contigo a la brevedad.</p>
+                </div>
+
+                <!-- Tabs tipo de consulta -->
+                <div class="ch-tabs" role="tablist">
+                    <button class="ch-tab active" data-tab="consulta" role="tab">Consulta Legal</button>
+                    <button class="ch-tab" data-tab="reunion" role="tab">Solicitar Reunión</button>
+                    <button class="ch-tab" data-tab="otro" role="tab">Otro Asunto</button>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="cf-grid-2">
+                        <div class="cf-group no-mb">
+                            <label for="nombre">Nombre *</label>
+                            <div class="cf-input-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                        </div>
+                        <div class="cf-group no-mb">
+                            <label for="apellido">Apellido *</label>
+                            <div class="cf-input-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cf-grid-2">
+                        <div class="cf-group no-mb">
+                            <label for="email">Correo Electrónico *</label>
+                            <div class="cf-input-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                            </div>
+                        </div>
+                        <div class="cf-group no-mb">
+                            <label for="telefono">Teléfono</label>
+                            <div class="cf-input-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.3a16 16 0 0 0 6 6"/>
+                                </svg>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+505 0000-0000">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cf-group">
+                        <label for="empresa">Empresa / Organización</label>
+                        <div class="cf-input-wrap">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                        </div>
+                    </div>
+
+                    <div class="cf-group">
+                        <label for="area">Área de Consulta *</label>
+                        <select id="area" name="area" required>
+                            <option value="" disabled selected>Selecciona un área legal</option>
+                            <option value="corporativo">Derecho Corporativo</option>
+                            <option value="comercial">Derecho Comercial</option>
+                            <option value="laboral">Derecho Laboral</option>
+                            <option value="ambiental">Derecho Ambiental</option>
+                            <option value="tributario">Derecho Tributario</option>
+                            <option value="litigios">Litigios y Arbitraje</option>
+                            <option value="contratos">Contratos y Negociaciones</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="cf-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Descríbenos tu caso, proyecto o consulta con el mayor detalle posible..." required></textarea>
+                    </div>
+
+                    <!-- Toggle urgencia -->
+                    <div class="cf-urgency" id="urgencyWrap" title="Activa si tu caso es urgente">
+                        <div class="cf-toggle" id="urgencyToggle"></div>
+                        <div class="cf-urgency-text">
+                            <strong>Caso urgente</strong>
+                            <span>Requiero atención prioritaria dentro de las próximas horas</span>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox privacidad -->
+                    <div class="cf-check">
+                        <div class="cf-check-box" id="privBox" role="checkbox" aria-checked="false" tabindex="0">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <label class="cf-check-label" for="privBox">
+                            He leído y acepto la <a href="#">Política de Privacidad</a> y autorizo el tratamiento de mis datos personales con fines de contacto legal.
+                        </label>
+                    </div>
+                    <input type="hidden" id="privacidadHidden" name="privacidad" value="no">
+
+                    <button type="submit" class="cf-submit" id="submitBtn">
+                        <span>Enviar mensaje</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="cf-success" id="successMsg">
+                    <div class="cf-success-ring">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <h4>¡Mensaje enviado con éxito!</h4>
+                    <p>Gracias por contactar a NCP. Nuestro equipo de especialistas se comunicará contigo en un plazo máximo de <strong>24 horas hábiles</strong>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FRANJA DE GARANTÍAS
+══════════════════════════════════════ -->
+<section class="ch-guarantees">
+    <div class="container">
+        <div class="ch-g-grid">
+            <div class="ch-g-card reveal">
+                <div class="ch-g-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Confidencialidad Total</h5>
+                    <p>Toda información compartida se trata con la más estricta reserva profesional.</p>
+                </div>
+            </div>
+            <div class="ch-g-card reveal reveal-delay-1">
+                <div class="ch-g-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Respuesta en 24 Horas</h5>
+                    <p>Nos comprometemos a responder toda consulta dentro del siguiente día hábil.</p>
+                </div>
+            </div>
+            <div class="ch-g-card reveal reveal-delay-2">
+                <div class="ch-g-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Equipo Especializado</h5>
+                    <p>Abogados expertos en cada área del derecho comercial a tu disposición.</p>
+                </div>
+            </div>
+            <div class="ch-g-card reveal reveal-delay-3">
+                <div class="ch-g-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                </div>
+                <div>
+                    <h5>Seguimiento Continuo</h5>
+                    <p>Monitoreo activo de tu caso y actualizaciones permanentes del proceso.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA FINAL
+══════════════════════════════════════ -->
+<section class="ch-cta">
+    <div class="ch-cta-inner">
+        <h2>¿Prefieres hablar directamente con un abogado?</h2>
+        <p>Agenda una llamada o visita a nuestras oficinas y recibe asesoría personalizada sin costo inicial.</p>
+        <div class="ch-cta-btns">
+            <a href="tel:+50500000000" class="ch-cta-btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#5C061C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.3a16 16 0 0 0 6 6"/>
+                </svg>
+                Llamar ahora
+            </a>
+            <a href="mailto:info@ncp.com.ni" class="ch-cta-btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+                Enviar email
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <a href="index.html" class="logo-link">
+            <img src="LOGO/LOGO-RECORTADO-BLANCO.png" alt="NCP Nicaragua Counsel Partner" class="logo logo-footer">
+        </a>
+        <nav class="footer__nav">
+            <a href="index.html#adn">ADN</a>
+            <a href="index.html#valores">Cultura</a>
+            <a href="index.html#sostenibilidad">Sostenibilidad</a>
+            <a href="index.html#miembro">Miembro</a>
+            <a href="contacto.html" class="footer-contacto-link">Contáctenos</a>
+        </nav>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">© 2026 NCP Nicaragua Counsel Partner. Todos los derechos reservados. Diseñado bajo estándares corporativos premium.</p>
+    </div>
+</footer>
+
+<script>
+/* ── TABS ── */
+document.querySelectorAll('.ch-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.ch-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+    });
+});
+
+/* ── URGENCY TOGGLE ── */
+const toggle = document.getElementById('urgencyToggle');
+const urgencyWrap = document.getElementById('urgencyWrap');
+let urgencyOn = false;
+urgencyWrap.addEventListener('click', () => {
+    urgencyOn = !urgencyOn;
+    toggle.classList.toggle('on', urgencyOn);
+});
+
+/* ── CHECKBOX PRIVACIDAD ── */
+const privBox = document.getElementById('privBox');
+const privHidden = document.getElementById('privacidadHidden');
+let privChecked = false;
+privBox.addEventListener('click', () => {
+    privChecked = !privChecked;
+    privBox.classList.toggle('checked', privChecked);
+    privBox.setAttribute('aria-checked', privChecked);
+    privHidden.value = privChecked ? 'si' : 'no';
+});
+privBox.addEventListener('keydown', e => {
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); privBox.click(); }
+});
+
+/* ── VALIDACIÓN Y ENVÍO ── */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const btn = document.getElementById('submitBtn');
+    const success = document.getElementById('successMsg');
+    let valid = true;
+
+    // Validar campos requeridos
+    form.querySelectorAll('[required]').forEach(field => {
+        const isEmpty = field.value === '' || (field.tagName === 'SELECT' && field.value === '');
+        if (isEmpty) {
+            valid = false;
+            field.style.borderColor = '#ef4444';
+            field.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.12)';
+        } else {
+            field.style.borderColor = '';
+            field.style.boxShadow = '';
+        }
+    });
+
+    if (!privChecked) {
+        valid = false;
+        privBox.style.borderColor = '#ef4444';
+        privBox.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.12)';
+    } else {
+        privBox.style.borderColor = '';
+        privBox.style.boxShadow = '';
+    }
+
+    if (!valid) return;
+
+    btn.querySelector('span').textContent = 'Enviando...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+        form.style.display = 'none';
+        success.style.display = 'block';
+    }, 1400);
+});
+
+// Quitar errores al escribir
+document.querySelectorAll('input, textarea, select').forEach(el => {
+    el.addEventListener('input', () => {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+    });
+});
+
+/* ── REVEAL ON SCROLL ── */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
